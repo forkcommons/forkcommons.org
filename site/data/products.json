@@ -1,0 +1,869 @@
+{
+  "programs": [
+    {
+      "id": "townlight",
+      "name": "TownLight",
+      "domain": "townlight.org",
+      "for": "Town halls, clerks, planners and public media stations",
+      "summary": "A municipal operations suite: records, meetings, codes, zoning, permits and station work, installed on the town's own computer and run by its own staff.",
+      "org": "https://github.com/townlight",
+      "site": "https://townlight.github.io/",
+      "blaze": "circle"
+    },
+    {
+      "id": "local-news",
+      "name": "Local News Network",
+      "domain": "localnewsnetwork.org",
+      "for": "Residents, local reporters and small publishers",
+      "summary": "Tools that turn public meetings, packets and minutes into a public record anyone can search, read and report from, with every claim linked to its source.",
+      "org": "https://github.com/scottconverse",
+      "blaze": "square"
+    },
+    {
+      "id": "public-media",
+      "name": "PublicCast",
+      "domain": "publiccast.org",
+      "for": "Public access stations, arts organizations and video makers",
+      "summary": "Broadcast, publishing, captioning and audio description for stations and creators who are tired of renting their own archive back.",
+      "org": "https://github.com/forkcommons",
+      "blaze": "diamond"
+    },
+    {
+      "id": "makers",
+      "name": "TinkerCommons",
+      "domain": "tinkercommons.org",
+      "for": "Makerspaces, tool libraries and people who print parts",
+      "summary": "Workshop management plus local AI design tools that turn a plain description into a checked, printable part.",
+      "org": "https://github.com/scottconverse",
+      "blaze": "triangle"
+    },
+    {
+      "id": "everyday",
+      "name": "Everyday",
+      "for": "People and small organizations",
+      "summary": "Useful software that doesn't fit a single sector: research, local AI, patent analysis and small-business tools.",
+      "org": "https://github.com/scottconverse",
+      "blaze": "bar"
+    }
+  ],
+  "products": [
+    {
+      "name": "Records",
+      "program": "townlight",
+      "line": "From request intake to a deliberate, reviewed release.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/sunshine",
+      "docs": "https://townlight.github.io/manuals/records.html",
+      "site": "https://townlight.github.io/products/records/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Meetings",
+      "program": "townlight",
+      "line": "Agendas, packets, motions, votes and minutes kept together with their evidence.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/meetings",
+      "docs": "https://townlight.github.io/manuals/meetings.html",
+      "site": "https://townlight.github.io/products/meetings/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Code",
+      "program": "townlight",
+      "line": "The municipal code with every section traced to its source and history.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/ordinances",
+      "docs": "https://townlight.github.io/manuals/code.html",
+      "site": "https://townlight.github.io/products/code/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Zoning",
+      "program": "townlight",
+      "line": "Parcel context and cited rules in one review.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/zone",
+      "docs": "https://townlight.github.io/manuals/zoning.html",
+      "site": "https://townlight.github.io/products/zoning/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Planning",
+      "program": "townlight",
+      "line": "Connects adopted policy, analysis and progress.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/plan",
+      "docs": "https://townlight.github.io/manuals/planning.html",
+      "site": "https://townlight.github.io/products/planning/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Permitting",
+      "program": "townlight",
+      "line": "A complete, cited permit intake ready for staff review.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/permit",
+      "docs": "https://townlight.github.io/manuals/permitting.html",
+      "site": "https://townlight.github.io/products/permitting/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Inspections",
+      "program": "townlight",
+      "line": "Field evidence preserved and every draft finding reviewed.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/inspect",
+      "docs": "https://townlight.github.io/manuals/inspections.html",
+      "site": "https://townlight.github.io/products/inspections/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Station",
+      "program": "townlight",
+      "line": "Captures the public meeting and preserves its recording as evidence.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/station",
+      "docs": "https://townlight.github.io/manuals/station.html",
+      "site": "https://townlight.github.io/products/station/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Access",
+      "program": "townlight",
+      "line": "Accessibility, plain-language and ADA Title II review, with a record proving you checked.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/access",
+      "docs": "https://townlight.github.io/manuals/access.html",
+      "site": "https://townlight.github.io/products/access/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Notice",
+      "program": "townlight",
+      "line": "Hearing, legal and bid notices with deadlines, channels and proof of publication.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/notice",
+      "docs": "https://townlight.github.io/manuals/notice.html",
+      "site": "https://townlight.github.io/products/notice/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Boards & Commissions",
+      "program": "townlight",
+      "line": "Board rosters, member terms, vacancies and attendance.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/boards",
+      "site": "https://townlight.github.io/products/boards/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Contracts",
+      "program": "townlight",
+      "line": "A central contract registry with clause topics, expirations and renewals.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/contracts",
+      "site": "https://townlight.github.io/products/contracts/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Procurement",
+      "program": "townlight",
+      "line": "RFP drafting, proposal comparison, scoring summaries and award packets.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/procure",
+      "site": "https://townlight.github.io/products/procurement/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "311",
+      "program": "townlight",
+      "line": "Resident service requests, triage and routing, with Open311 export.",
+      "status": "development",
+      "repo": "https://github.com/townlight/311",
+      "site": "https://townlight.github.io/products/311/"
+    },
+    {
+      "name": "Budget",
+      "program": "townlight",
+      "line": "Variance notes, department narratives and council budget memos.",
+      "status": "development",
+      "repo": "https://github.com/townlight/budget",
+      "site": "https://townlight.github.io/products/budget/"
+    },
+    {
+      "name": "Communications",
+      "program": "townlight",
+      "line": "Source-backed explainers, meeting summaries and newsletters.",
+      "status": "development",
+      "repo": "https://github.com/townlight/comms",
+      "site": "https://townlight.github.io/products/comms/"
+    },
+    {
+      "name": "Courts",
+      "program": "townlight",
+      "line": "Cited procedure answers and hearing prep for municipal court clerks.",
+      "status": "development",
+      "repo": "https://github.com/townlight/court",
+      "site": "https://townlight.github.io/products/court/"
+    },
+    {
+      "name": "Data",
+      "program": "townlight",
+      "line": "Open-data preparation and data dictionaries.",
+      "status": "development",
+      "repo": "https://github.com/townlight/data",
+      "site": "https://townlight.github.io/products/data/"
+    },
+    {
+      "name": "Elections",
+      "program": "townlight",
+      "line": "Cited voter guidance, filing checklists and canvass workpapers.",
+      "status": "development",
+      "repo": "https://github.com/townlight/elections",
+      "site": "https://townlight.github.io/products/elections/"
+    },
+    {
+      "name": "Grants",
+      "program": "townlight",
+      "line": "Grant triage, eligibility matching and compliance calendars.",
+      "status": "development",
+      "repo": "https://github.com/townlight/grants",
+      "site": "https://townlight.github.io/products/grants/"
+    },
+    {
+      "name": "HR",
+      "program": "townlight",
+      "line": "Personnel-policy lookups and handbook summaries.",
+      "status": "development",
+      "repo": "https://github.com/townlight/hr",
+      "site": "https://townlight.github.io/products/hr/"
+    },
+    {
+      "name": "Legal",
+      "program": "townlight",
+      "line": "Privilege-aware, citation-first research across city records.",
+      "status": "development",
+      "repo": "https://github.com/townlight/legal",
+      "site": "https://townlight.github.io/products/legal/"
+    },
+    {
+      "name": "Library",
+      "program": "townlight",
+      "line": "Cited policy and program answers for municipal libraries.",
+      "status": "development",
+      "repo": "https://github.com/townlight/library",
+      "site": "https://townlight.github.io/products/library/"
+    },
+    {
+      "name": "Parks",
+      "program": "townlight",
+      "line": "Parks and recreation policy, programs and maintenance triage.",
+      "status": "development",
+      "repo": "https://github.com/townlight/parks",
+      "site": "https://townlight.github.io/products/parks/"
+    },
+    {
+      "name": "Safety",
+      "program": "townlight",
+      "line": "Public-safety administrative support: SOP answers, training and PIO drafts.",
+      "status": "development",
+      "repo": "https://github.com/townlight/safety",
+      "site": "https://townlight.github.io/products/safety/"
+    },
+    {
+      "name": "Utilities",
+      "program": "townlight",
+      "line": "Utility customer-service support with cited policy answers.",
+      "status": "development",
+      "repo": "https://github.com/townlight/utility",
+      "site": "https://townlight.github.io/products/utility/"
+    },
+    {
+      "name": "TownReporter",
+      "program": "local-news",
+      "line": "A civic newsroom you run yourself: a public paper in front, an editor desk behind it.",
+      "status": "live",
+      "version": "0.7.0",
+      "repo": "https://github.com/scottconverse/TownReporter",
+      "live": "https://townreporter.org",
+      "liveLabel": "townreporter.org",
+      "site": "https://scottconverse.github.io/TownReporter/",
+      "localAI": "Local models on LM Studio, Ollama or llama.cpp"
+    },
+    {
+      "name": "CivicCast Brief",
+      "program": "local-news",
+      "line": "Cited recaps, news stories and a podcast episode for every public meeting.",
+      "status": "live",
+      "version": "0.3.0",
+      "repo": "https://github.com/scottconverse/civiccast-brief",
+      "site": "https://scottconverse.github.io/civiccast-brief/",
+      "live": "https://civiccastbrief.org",
+      "liveLabel": "8 Colorado towns",
+      "localAI": "Writes with Ollama, or a subscription if you choose"
+    },
+    {
+      "name": "The Civic Desk",
+      "program": "local-news",
+      "line": "A desktop newsroom for small publishers: find leads, draft, check and publish.",
+      "status": "beta",
+      "version": "0.3.3",
+      "repo": "https://github.com/scottconverse/CivicNewspaper",
+      "site": "https://scottconverse.github.io/CivicNewspaper/",
+      "localAI": "Sets up and manages a local Ollama model for drafting"
+    },
+    {
+      "name": "TownRecord",
+      "program": "local-news",
+      "line": "A searchable public meeting record with links back to every source.",
+      "status": "preview",
+      "version": "0.2.0",
+      "repo": "https://github.com/scottconverse/townrecord",
+      "site": "https://scottconverse.github.io/townrecord/",
+      "localAI": "Local transcription with Whisper"
+    },
+    {
+      "name": "Civic Scanner",
+      "program": "local-news",
+      "line": "An agent skill that reports across a town's whole civic landscape.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/civic-scanner",
+      "site": "https://scottconverse.github.io/civic-scanner/"
+    },
+    {
+      "name": "Civic Newsroom",
+      "program": "local-news",
+      "line": "Nine editorial prompts built to newspaper standards. No software required.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/civic-newsroom",
+      "site": "https://scottconverse.github.io/civic-newsroom/"
+    },
+    {
+      "name": "Civic Transparency Toolkit",
+      "program": "local-news",
+      "line": "A desktop app that turns city hall's public records into community news.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/civic-transparency-toolkit",
+      "site": "https://scottconverse.github.io/civic-transparency-toolkit/"
+    },
+    {
+      "name": "CuePorch",
+      "program": "public-media",
+      "line": "Preserves and publishes video for stations and arts institutions. Imports from Vimeo.",
+      "status": "preview",
+      "version": "0.2.0",
+      "repo": "https://github.com/forkcommons/CuePorch",
+      "site": "https://forkcommons.github.io/CuePorch/"
+    },
+    {
+      "name": "CivicCast",
+      "program": "public-media",
+      "line": "A station in a box: scheduling, playout, recording, captions and a resident portal.",
+      "status": "beta",
+      "version": "1.0.0-rc.7",
+      "repo": "https://github.com/scottconverse/civiccast",
+      "site": "https://scottconverse.github.io/civiccast/",
+      "localAI": "Offline captions with Whistle and Whisper, summaries through Ollama"
+    },
+    {
+      "name": "Describer Workbench",
+      "program": "public-media",
+      "line": "Writes timed audio description for video, then lets you edit, hear and export it.",
+      "status": "beta",
+      "version": "0.8.4",
+      "repo": "https://github.com/scottconverse/Describer-Workbench",
+      "site": "https://scottconverse.github.io/Describer-Workbench/",
+      "localAI": "Ollama vision models draft the descriptions"
+    },
+    {
+      "name": "TinkerCommons",
+      "program": "makers",
+      "line": "One system for members, waivers, badges, bookings, door access and the ledger.",
+      "status": "development",
+      "repo": "https://github.com/scottconverse/tinkercommons",
+      "site": "https://scottconverse.github.io/tinkercommons/"
+    },
+    {
+      "name": "TinkerQuarry",
+      "program": "makers",
+      "line": "Local AI CAD: a plain-English idea becomes editable, checked, sliced CAD.",
+      "status": "released",
+      "version": "1.4.0",
+      "repo": "https://github.com/scottconverse/TinkerQuarry",
+      "site": "https://scottconverse.github.io/TinkerQuarry/",
+      "localAI": "Local model by default, no cloud unless you set one up"
+    },
+    {
+      "name": "KimCad",
+      "program": "makers",
+      "line": "Describe a part, or show a photo or sketch, and get a print-ready file.",
+      "status": "beta",
+      "version": "0.9.0b3",
+      "repo": "https://github.com/scottconverse/KimCadClaude",
+      "site": "https://scottconverse.github.io/KimCadClaude/",
+      "localAI": "Runs on your computer with Ollama, CPU-only path"
+    },
+    {
+      "name": "ScadMill",
+      "program": "makers",
+      "line": "A source-first OpenSCAD workbench that keeps the code as the real artifact.",
+      "status": "beta",
+      "version": "0.1.0-beta.3",
+      "repo": "https://github.com/scottconverse/scadmill",
+      "localAI": "Optional local AI provider, no telemetry",
+      "site": "https://scottconverse.github.io/scadmill/"
+    },
+    {
+      "name": "tq-threads",
+      "program": "makers",
+      "line": "Clean-room, printable screw threads and hardware for OpenSCAD.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/tq-threads",
+      "site": "https://scottconverse.github.io/tq-threads/"
+    },
+    {
+      "name": "PrintProof3D",
+      "program": "makers",
+      "line": "Printability analysis and printer management engine in Rust.",
+      "status": "preview",
+      "repo": "https://github.com/scottconverse/PrintProof3D",
+      "site": "https://scottconverse.github.io/PrintProof3D/"
+    },
+    {
+      "name": "PatentForge",
+      "program": "everyday",
+      "line": "Patent research and drafting, fully local or with a cloud model.",
+      "status": "released",
+      "version": "0.5.0",
+      "repo": "https://github.com/scottconverse/patentforge",
+      "site": "https://scottconverse.github.io/patentforge/",
+      "localAI": "Local mode: Ollama and Gemma 4, fully offline"
+    },
+    {
+      "name": "Local AI Control Center",
+      "program": "everyday",
+      "line": "Run Ollama, OpenHands and Open WebUI on Windows without the terminal.",
+      "status": "released",
+      "version": "0.5.5",
+      "repo": "https://github.com/scottconverse/local-ai-control-center",
+      "site": "https://scottconverse.github.io/local-ai-control-center/landing/",
+      "localAI": "Installs and runs Ollama, OpenHands and Open WebUI"
+    },
+    {
+      "name": "Reddit Search + Redlib",
+      "program": "everyday",
+      "line": "Research Reddit discussions with direct citations and honest coverage limits.",
+      "status": "released",
+      "version": "0.1.2",
+      "repo": "https://github.com/scottconverse/reddit-search-redlib",
+      "site": "https://scottconverse.github.io/reddit-search-redlib/"
+    },
+    {
+      "name": "OneDrive Exorcism",
+      "program": "everyday",
+      "line": "Removes OneDrive from Windows and repairs the folders it redirected.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/onedrive-exorcism",
+      "site": "https://scottconverse.github.io/onedrive-exorcism/"
+    },
+    {
+      "name": "KloDock",
+      "program": "everyday",
+      "line": "A desktop app for OpenClaw. No terminal.",
+      "status": "released",
+      "version": "1.2.0",
+      "repo": "https://github.com/scottconverse/klodock",
+      "site": "https://scottconverse.github.io/klodock/",
+      "localAI": "Runs OpenClaw against local Ollama models"
+    },
+    {
+      "name": "Amazon Seller Skill Suite",
+      "program": "everyday",
+      "line": "Six agent skills for Amazon sellers, for any brand or category.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/amazon-seller-skill-suite",
+      "site": "https://scottconverse.github.io/amazon-seller-skill-suite/"
+    },
+    {
+      "name": "Amazon Seller Prompt Suite",
+      "program": "everyday",
+      "line": "Six system prompts for Amazon selling that work with any AI.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/amazon-seller-prompt-suite",
+      "site": "https://scottconverse.github.io/amazon-seller-prompt-suite/"
+    }
+  ],
+  "core": [
+    {
+      "name": "Local AI layer",
+      "role": "Your own models",
+      "line": "Every product can run on models on your own computer through Ollama, LM Studio or llama.cpp, with speech-to-text from Whisper. Cloud models are a choice, never a requirement.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/local-ai-control-center",
+      "site": "https://scottconverse.github.io/local-ai-control-center/landing/",
+      "usedBy": [
+        "townlight",
+        "local-news",
+        "public-media",
+        "makers",
+        "everyday"
+      ]
+    },
+    {
+      "name": "TextFlowKit",
+      "role": "Transcription",
+      "line": "Turns meeting video and audio into timestamped transcripts and subtitles.",
+      "status": "released",
+      "version": "0.1.19",
+      "repo": "https://github.com/scottconverse/textflowkit",
+      "site": "https://www.textflowkit.org/",
+      "usedBy": [
+        "townlight",
+        "local-news",
+        "public-media"
+      ],
+      "localAI": "Local speech-to-text with Whistle and Whisper"
+    },
+    {
+      "name": "QuorumRelay",
+      "role": "Civic data connectors",
+      "line": "Finds and retrieves public records from the systems towns already use, with the source attached.",
+      "status": "preview",
+      "version": "0.1.0.dev15",
+      "repo": "https://github.com/townlight/quorumrelay",
+      "site": "https://townlight.github.io/quorumrelay/",
+      "usedBy": [
+        "townlight",
+        "local-news"
+      ]
+    },
+    {
+      "name": "Siftwing",
+      "role": "Evidence search",
+      "line": "Answers questions from retained records and opens the passage behind each citation.",
+      "status": "preview",
+      "version": "0.1.0-dev.57",
+      "repo": "https://github.com/scottconverse/siftwing",
+      "site": "https://scottconverse.github.io/siftwing/",
+      "usedBy": [
+        "local-news",
+        "everyday"
+      ],
+      "localAI": "Local research workspace, works with LM Studio"
+    },
+    {
+      "name": "TownLight Core and Runtime",
+      "role": "Records and identity",
+      "line": "Shared accounts, audit trail, retained originals and a local runtime for every TownLight product.",
+      "status": "beta",
+      "repo": "https://github.com/townlight/core",
+      "docs": "https://townlight.github.io/manuals/core.html",
+      "usedBy": [
+        "townlight"
+      ],
+      "site": "https://townlight.github.io/products/core/",
+      "localAI": "Optional local model on the town's own computer. Works without AI too"
+    },
+    {
+      "name": "Halo Research Gateway",
+      "role": "Local research service",
+      "line": "One source-backed search and research service for local AI clients.",
+      "status": "released",
+      "version": "0.3.0",
+      "repo": "https://github.com/scottconverse/halo-research-gateway",
+      "usedBy": [
+        "everyday",
+        "local-news"
+      ],
+      "localAI": "Research service for local AI clients",
+      "site": "https://scottconverse.github.io/halo-research-gateway/"
+    },
+    {
+      "name": "Community AI Utility",
+      "role": "Shared intelligence",
+      "line": "Openly licensed models on community-owned machines, behind one gateway that meters use, enforces the rules and can rent overflow from competing hosts.",
+      "status": "planned",
+      "repo": "",
+      "usedBy": [
+        "townlight",
+        "local-news",
+        "public-media",
+        "makers",
+        "everyday"
+      ]
+    }
+  ],
+  "workshop": [
+    {
+      "name": "Verdict",
+      "line": "Evidence-first verification for AI coding agents. The agent writes claims, never verdicts.",
+      "status": "released",
+      "version": "1.1.0",
+      "repo": "https://github.com/scottconverse/verdict",
+      "site": "https://scottconverse.github.io/verdict/"
+    },
+    {
+      "name": "VerdictLite",
+      "line": "Makes the coding agent run the checks before it stops.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/verdictlite",
+      "site": "https://scottconverse.github.io/verdictlite/"
+    },
+    {
+      "name": "Rigwell",
+      "line": "A local workbench for coding agents: workstreams, missions, review and pull requests.",
+      "status": "beta",
+      "version": "0.4.4",
+      "repo": "https://github.com/scottconverse/rigwell",
+      "site": "https://scottconverse.github.io/rigwell/"
+    },
+    {
+      "name": "DevHarmonics",
+      "line": "A local, host-agnostic software factory built to survive any one vendor disappearing.",
+      "status": "development",
+      "repo": "https://github.com/scottconverse/DevHarmonics",
+      "localAI": "Workers can be local models over HTTP",
+      "site": "https://scottconverse.github.io/DevHarmonics/"
+    },
+    {
+      "name": "Prover",
+      "line": "Checks exactly which bytes and claims a release actually contains.",
+      "status": "released",
+      "version": "0.1.0",
+      "repo": "https://github.com/scottconverse/prover",
+      "site": "https://scottconverse.github.io/prover/"
+    },
+    {
+      "name": "installer-ci",
+      "line": "Tests real installs end to end across 13 installer types, built never to false-pass.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/installer-ci",
+      "site": "https://scottconverse.github.io/installer-ci/"
+    },
+    {
+      "name": "tampercheck",
+      "line": "Reports whether a change weakened the project's own tests.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/tampercheck",
+      "site": "https://scottconverse.github.io/tampercheck/"
+    },
+    {
+      "name": "deterministic-detector",
+      "line": "Lint, randomized test order and mutation reporting for coding agents.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/deterministic-detector",
+      "site": "https://scottconverse.github.io/deterministic-detector/"
+    },
+    {
+      "name": "dev-rigor-stack-lite",
+      "line": "The current home of the gate, proof and audit skills.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/dev-rigor-stack-lite",
+      "site": "https://scottconverse.github.io/dev-rigor-stack-lite/"
+    },
+    {
+      "name": "claude-hook-kit",
+      "line": "Thirteen per-project Claude Code hooks that stop stalls, drift and unsupported claims.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/claude-hook-kit",
+      "site": "https://scottconverse.github.io/claude-hook-kit/"
+    },
+    {
+      "name": "Codex Hook Kit",
+      "line": "The same workflow checks for Codex sessions.",
+      "status": "released",
+      "version": "1.1.0",
+      "repo": "https://github.com/scottconverse/codex-hook-kit",
+      "site": "https://scottconverse.github.io/codex-hook-kit/"
+    },
+    {
+      "name": "AntiStallCodex",
+      "line": "Keeps autonomous Codex work from ending early.",
+      "status": "released",
+      "version": "0.1.0",
+      "repo": "https://github.com/scottconverse/antistallcodex",
+      "site": "https://scottconverse.github.io/antistallcodex/"
+    },
+    {
+      "name": "AgentSuite",
+      "line": "Seven role agents that turn vague intent into precise operating documents.",
+      "status": "released",
+      "version": "1.1.1",
+      "repo": "https://github.com/scottconverse/AgentSuite",
+      "site": "https://scottconverse.github.io/AgentSuite/",
+      "localAI": "Runs on Ollama and Gemma"
+    },
+    {
+      "name": "AgentSuiteLocal",
+      "line": "AgentSuite as an installable app on local models.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/AgentSuiteLocal",
+      "site": "https://scottconverse.github.io/AgentSuiteLocal/",
+      "localAI": "Runs entirely on local models"
+    },
+    {
+      "name": "ProductTeam",
+      "line": "A supervised AI delivery pipeline where the builder never grades its own work.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/productteam",
+      "site": "https://scottconverse.github.io/productteam/",
+      "localAI": "Runs free on local models"
+    },
+    {
+      "name": "prompttools",
+      "line": "Lint, format, test and cost out LLM prompt files.",
+      "status": "released",
+      "version": "1.0.0",
+      "repo": "https://github.com/scottconverse/prompttools",
+      "site": "https://scottconverse.github.io/prompttools/"
+    },
+    {
+      "name": "promptlint",
+      "line": "35 rules that catch ambiguity, risk and bloat in prompts.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/promptlint",
+      "site": "https://scottconverse.github.io/promptlint/"
+    },
+    {
+      "name": "landing-page",
+      "line": "A skill that builds a project's website from what the code actually does.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/landing-page",
+      "site": "https://scottconverse.github.io/landing-page/"
+    },
+    {
+      "name": "Claude Code Windows Autonomy Kit",
+      "line": "Full-permission Claude Code setup for Windows development machines.",
+      "status": "released",
+      "version": "2.1.1",
+      "repo": "https://github.com/scottconverse/cowork-autonomy-kit",
+      "site": "https://scottconverse.github.io/cowork-autonomy-kit/"
+    },
+    {
+      "name": "Codex Desktop Autonomy Kit",
+      "line": "A click-first autonomy setup for Codex Desktop on Windows.",
+      "status": "released",
+      "version": "2.0.1",
+      "repo": "https://github.com/scottconverse/codex-desktop-autonomy-kit",
+      "site": "https://scottconverse.github.io/codex-desktop-autonomy-kit/"
+    },
+    {
+      "name": "DSH Halo for Windows",
+      "line": "A community configuration for DeepSeek Harness with research tools.",
+      "status": "preview",
+      "version": "0.1.4",
+      "repo": "https://github.com/scottconverse/dsh-halo-research",
+      "site": "https://scottconverse.github.io/dsh-halo-research/"
+    },
+    {
+      "name": "Antigravity Agent Studio",
+      "line": "A multi-session agent studio bridging local GPU models and cloud models.",
+      "status": "released",
+      "repo": "https://github.com/scottconverse/antigravity-agent-studio",
+      "site": "https://scottconverse.github.io/antigravity-agent-studio/",
+      "localAI": "Bridges local GPU models in LM Studio"
+    }
+  ],
+  "archive": [
+    {
+      "name": "DevHarmonics v1",
+      "line": "The first DevHarmonics, rewritten as the current one.",
+      "repo": "https://github.com/scottconverse/devharmonics-v1",
+      "site": "https://scottconverse.github.io/devharmonics-v1/"
+    },
+    {
+      "name": "GauntletGate",
+      "line": "A stage-gate a product must survive to advance.",
+      "repo": "https://github.com/scottconverse/GauntletGate",
+      "site": "https://scottconverse.github.io/GauntletGate/"
+    },
+    {
+      "name": "proof-gate",
+      "line": "An adversarial build-and-verify loop for high-stakes work.",
+      "repo": "https://github.com/scottconverse/proof-gate"
+    },
+    {
+      "name": "coder-tdd-qa",
+      "line": "A portable rulebook for test-driven, honestly verified agent coding.",
+      "repo": "https://github.com/scottconverse/coder-tdd-qa",
+      "site": "https://scottconverse.github.io/coder-tdd-qa/"
+    },
+    {
+      "name": "visitor-audit",
+      "line": "Checks public pages the way a first-time visitor sees them.",
+      "repo": "https://github.com/scottconverse/visitor-audit",
+      "site": "https://scottconverse.github.io/visitor-audit/"
+    },
+    {
+      "name": "hallucination-firewall",
+      "line": "A structure a hallucination can't get through. Now a hook.",
+      "repo": "https://github.com/scottconverse/hallucination-firewall",
+      "site": "https://scottconverse.github.io/hallucination-firewall/"
+    },
+    {
+      "name": "AntiStallClaude",
+      "line": "Stopped agents from quitting early. Now the sprint gate.",
+      "repo": "https://github.com/scottconverse/AntiStallClaude",
+      "site": "https://scottconverse.github.io/AntiStallClaude/"
+    },
+    {
+      "name": "agent-pipeline-claude",
+      "line": "Scope contracts for multi-step Claude Code work.",
+      "repo": "https://github.com/scottconverse/agent-pipeline-claude",
+      "site": "https://scottconverse.github.io/agent-pipeline-claude/"
+    },
+    {
+      "name": "agent-pipeline-codex",
+      "line": "The Codex counterpart.",
+      "repo": "https://github.com/scottconverse/agent-pipeline-codex",
+      "site": "https://scottconverse.github.io/agent-pipeline-codex/"
+    },
+    {
+      "name": "claude-dev-loop",
+      "line": "A vault-and-loop development operating system.",
+      "repo": "https://github.com/scottconverse/claude-dev-loop",
+      "site": "https://scottconverse.github.io/claude-dev-loop/"
+    },
+    {
+      "name": "codex-dev-loop",
+      "line": "The Codex counterpart.",
+      "repo": "https://github.com/scottconverse/codex-dev-loop",
+      "site": "https://scottconverse.github.io/codex-dev-loop/"
+    },
+    {
+      "name": "Codex Factory",
+      "line": "Gave AI workers a shift, not a blank check. Now the Codex lane of DevHarmonics.",
+      "repo": "https://github.com/scottconverse/codex-factory",
+      "site": "https://scottconverse.github.io/codex-factory/"
+    },
+    {
+      "name": "rigor-suite",
+      "line": "One-command install for the first verification toolset.",
+      "repo": "https://github.com/scottconverse/rigor-suite",
+      "site": "https://scottconverse.github.io/rigor-suite/"
+    },
+    {
+      "name": "stack",
+      "line": "The first-generation bundle.",
+      "repo": "https://github.com/scottconverse/stack",
+      "site": "https://scottconverse.github.io/stack/"
+    },
+    {
+      "name": "fleet-smoke",
+      "line": "A two-minute health check for an agent tool fleet.",
+      "repo": "https://github.com/scottconverse/fleet-smoke"
+    },
+    {
+      "name": "hardgate",
+      "line": "Hard enforcement that made Claude Code follow its rules. Now the command gate.",
+      "repo": "https://github.com/scottconverse/hardgate",
+      "site": "https://scottconverse.github.io/hardgate/"
+    },
+    {
+      "name": "Patent Analyzer",
+      "line": "The app that became PatentForge.",
+      "repo": "https://github.com/scottconverse/patent-analyzer-app",
+      "site": "https://scottconverse.github.io/patent-analyzer-app/"
+    }
+  ]
+}
