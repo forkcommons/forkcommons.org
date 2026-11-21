@@ -487,9 +487,7 @@ p { margin: 0; max-width: 64ch; }
 
 .rail-toc { display: none; }
 
-@media (min-width: 1200px) {
-  /* Reserve a left margin column for the rail so it never covers text. */
-  body.has-rail main { padding-left: 200px; }
+@media (min-width: 1600px) {
   .rail-toc {
     display: block;
     position: fixed;
@@ -502,7 +500,8 @@ p { margin: 0; max-width: 64ch; }
     font-size: var(--s-1);
     line-height: 1.35;
     border-left: 2px solid var(--rule);
-    padding-left: 10px;
+    background: var(--paper);
+    padding: 10px 10px 10px 12px;
     z-index: 5;
   }
   .rail-toc .rt-title {
