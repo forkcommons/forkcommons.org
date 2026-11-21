@@ -34,7 +34,7 @@
     if (typeof window.IntersectionObserver !== "function") return;
 
     var started = false;
-    var trigger = nums[0].parentNode;
+    var trigger = nums[0].closest(".facts") || nums[0].parentNode;
 
     function start() {
       if (started) return;

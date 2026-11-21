@@ -481,9 +481,7 @@ p { margin: 0; max-width: 64ch; }
 .delivery .sd-lt.inv { fill: #fff; }
 .delivery .sd-ls.inv { fill: #cfd2c4; }
 
-/* Animated hero numbers and the rail table of contents (assets/site.js) */
-.byline { font-variant-numeric: tabular-nums; }
-.byline [data-count-to] { font-weight: 700; color: var(--ink); }
+/* Animated facts numbers and the rail table of contents (assets/site.js) */
 
 .rail-toc { display: none; }
 
