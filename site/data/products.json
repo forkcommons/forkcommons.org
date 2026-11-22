@@ -8,6 +8,11 @@
       "summary": "A municipal operations suite: records, meetings, codes, zoning, permits and station work, installed on the town's own computer and run by its own staff.",
       "org": "https://github.com/townlight",
       "site": "https://townlight.github.io/",
+      "release": {
+        "label": "Windows 1.9.2.1",
+        "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.2.1",
+        "summary": "Council packet revisions with current-draft staff and public approval; shared Windows staff workflows across Meetings, Station and Records; and approved unattended portal delivery with corrections and withdrawals."
+      },
       "blaze": "circle"
     },
     {
