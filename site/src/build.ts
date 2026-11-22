@@ -598,6 +598,7 @@ ${blaze(p.blaze)}
 ${p.domain ? `<p class="muted"><strong>${esc(p.domain)}</strong></p>` : ""}
 <h1>${esc(p.name)}</h1>
 <p class="lede">${esc(p.summary)}</p>
+${p.release ? `<p class="legend-note"><strong>${esc(p.release.label)}:</strong> ${esc(p.release.summary)} <a href="${esc(p.release.url)}">Release notes and signed installer</a>.</p>` : ""}
 <div class="meta"><span>For <strong>${esc(p.for.toLowerCase())}</strong></span><span><strong>${esc(tallyText(items))}</strong></span>${p.site ? `<a href="${esc(p.site)}">${esc(p.name)} website</a>` : ""}<a href="${esc(p.org)}">Code on GitHub</a></div>
 </div>
 </div></section>
