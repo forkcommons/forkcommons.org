@@ -9,9 +9,9 @@
       "org": "https://github.com/townlight",
       "site": "https://townlight.github.io/",
       "release": {
-        "label": "Windows 1.9.2.1",
-        "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.2.1",
-        "summary": "Council packet revisions with current-draft staff and public approval; shared Windows staff workflows across Meetings, Station and Records; and approved unattended portal delivery with corrections and withdrawals."
+        "label": "Townlight Windows beta 1.9.3.1",
+        "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.1",
+        "summary": "Townlight for Windows 1.9.3.1 includes Data, Budget, and Grants, verified together by signed acceptance."
       },
       "blaze": "circle"
     },
@@ -190,10 +190,11 @@
     {
       "name": "Budget",
       "program": "townlight",
-      "line": "Variance notes, department narratives and council budget memos.",
-      "status": "development",
+      "line": "Staff can review budgets, prepare a public hearing packet, record the adopted budget, and publish it through Data.",
+      "status": "beta",
       "repo": "https://github.com/townlight/budget",
-      "site": "https://townlight.github.io/products/budget/"
+      "site": "https://townlight.github.io/products/budget/",
+      "docs": "https://github.com/townlight/budget/blob/main/USER-MANUAL.md"
     },
     {
       "name": "Communications",
@@ -214,10 +215,11 @@
     {
       "name": "Data",
       "program": "townlight",
-      "line": "Open-data preparation and data dictionaries.",
-      "status": "development",
+      "line": "Staff can review datasets, publish approved CSV and JSON files, and correct or withdraw published data.",
+      "status": "beta",
       "repo": "https://github.com/townlight/data",
-      "site": "https://townlight.github.io/products/data/"
+      "site": "https://townlight.github.io/products/data/",
+      "docs": "https://github.com/townlight/data/blob/main/USER-MANUAL.md"
     },
     {
       "name": "Elections",
@@ -230,10 +232,11 @@
     {
       "name": "Grants",
       "program": "townlight",
-      "line": "Grant triage, eligibility matching and compliance calendars.",
-      "status": "development",
+      "line": "Staff can manage awards, deadlines, and closeout with links to budget, contracts, and records.",
+      "status": "beta",
       "repo": "https://github.com/townlight/grants",
-      "site": "https://townlight.github.io/products/grants/"
+      "site": "https://townlight.github.io/products/grants/",
+      "docs": "https://github.com/townlight/grants/blob/main/USER-MANUAL.md"
     },
     {
       "name": "HR",
