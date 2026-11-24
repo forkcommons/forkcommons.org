@@ -242,6 +242,7 @@ p { margin: 0; max-width: 64ch; }
 .status-released { background: var(--forest); color: #fff; }
 .status-preview { border-style: dotted; }
 .status-development { border: 1.5px dashed var(--muted); color: var(--muted); background: transparent; }
+.status-parked { border: 1.5px dashed var(--rule); color: var(--muted); background: transparent; }
 .status-archived { border-color: var(--rule); color: var(--muted); background: transparent; }
 .status-planned { border: 1.5px dashed var(--wood); color: var(--wood); background: transparent; }
 

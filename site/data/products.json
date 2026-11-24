@@ -5,7 +5,7 @@
       "name": "TownLight",
       "domain": "townlight.org",
       "for": "Town halls, clerks, planners and public media stations",
-      "summary": "A municipal operations suite: records, meetings, codes, zoning, permits and station work, installed on the town's own computer and run by its own staff.",
+      "summary": "A municipal operations suite of 16 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility and meeting recording. Installed on the town's own computer and run by its own staff.",
       "org": "https://github.com/townlight",
       "site": "https://townlight.github.io/",
       "release": {
@@ -55,7 +55,7 @@
     {
       "name": "Records",
       "program": "townlight",
-      "line": "From request intake to a deliberate, reviewed release.",
+      "line": "From request intake to a reviewed release, with private attachments and verified staff downloads.",
       "status": "beta",
       "repo": "https://github.com/townlight/sunshine",
       "docs": "https://townlight.github.io/manuals/records.html",
@@ -116,7 +116,7 @@
       "name": "Inspections",
       "program": "townlight",
       "line": "Field evidence preserved and every draft finding reviewed.",
-      "status": "beta",
+      "status": "preview",
       "repo": "https://github.com/townlight/inspect",
       "docs": "https://townlight.github.io/manuals/inspections.html",
       "site": "https://townlight.github.io/products/inspections/",
@@ -135,7 +135,7 @@
     {
       "name": "Access",
       "program": "townlight",
-      "line": "Accessibility, plain-language and ADA Title II review, with a record proving you checked.",
+      "line": "Accessibility and publication review, plain-language rewrites and translation drafts, with a record proving you checked.",
       "status": "beta",
       "repo": "https://github.com/townlight/access",
       "docs": "https://townlight.github.io/manuals/access.html",
@@ -164,7 +164,7 @@
     {
       "name": "Contracts",
       "program": "townlight",
-      "line": "A central contract registry with clause topics, expirations and renewals.",
+      "line": "A register of agreements, vendors, responsible staff, signed PDFs and renewal dates, linked to Procurement awards.",
       "status": "beta",
       "repo": "https://github.com/townlight/contracts",
       "site": "https://townlight.github.io/products/contracts/",
@@ -173,7 +173,7 @@
     {
       "name": "Procurement",
       "program": "townlight",
-      "line": "RFP drafting, proposal comparison, scoring summaries and award packets.",
+      "line": "RFP workpapers, proposal summaries, staff scoring, recorded award decisions and linked contract drafts.",
       "status": "beta",
       "repo": "https://github.com/townlight/procure",
       "site": "https://townlight.github.io/products/procurement/",
@@ -183,7 +183,7 @@
       "name": "311",
       "program": "townlight",
       "line": "Resident service requests, triage and routing, with Open311 export.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/311",
       "site": "https://townlight.github.io/products/311/"
     },
@@ -200,7 +200,7 @@
       "name": "Communications",
       "program": "townlight",
       "line": "Source-backed explainers, meeting summaries and newsletters.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/comms",
       "site": "https://townlight.github.io/products/comms/"
     },
@@ -208,7 +208,7 @@
       "name": "Courts",
       "program": "townlight",
       "line": "Cited procedure answers and hearing prep for municipal court clerks.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/court",
       "site": "https://townlight.github.io/products/court/"
     },
@@ -225,7 +225,7 @@
       "name": "Elections",
       "program": "townlight",
       "line": "Cited voter guidance, filing checklists and canvass workpapers.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/elections",
       "site": "https://townlight.github.io/products/elections/"
     },
@@ -242,7 +242,7 @@
       "name": "HR",
       "program": "townlight",
       "line": "Personnel-policy lookups and handbook summaries.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/hr",
       "site": "https://townlight.github.io/products/hr/"
     },
@@ -250,7 +250,7 @@
       "name": "Legal",
       "program": "townlight",
       "line": "Privilege-aware, citation-first research across city records.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/legal",
       "site": "https://townlight.github.io/products/legal/"
     },
@@ -258,7 +258,7 @@
       "name": "Library",
       "program": "townlight",
       "line": "Cited policy and program answers for municipal libraries.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/library",
       "site": "https://townlight.github.io/products/library/"
     },
@@ -266,7 +266,7 @@
       "name": "Parks",
       "program": "townlight",
       "line": "Parks and recreation policy, programs and maintenance triage.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/parks",
       "site": "https://townlight.github.io/products/parks/"
     },
@@ -274,7 +274,7 @@
       "name": "Safety",
       "program": "townlight",
       "line": "Public-safety administrative support: SOP answers, training and PIO drafts.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/safety",
       "site": "https://townlight.github.io/products/safety/"
     },
@@ -282,7 +282,7 @@
       "name": "Utilities",
       "program": "townlight",
       "line": "Utility customer-service support with cited policy answers.",
-      "status": "development",
+      "status": "parked",
       "repo": "https://github.com/townlight/utility",
       "site": "https://townlight.github.io/products/utility/"
     },
@@ -303,7 +303,7 @@
       "program": "local-news",
       "line": "Cited recaps, news stories and a podcast episode for every public meeting.",
       "status": "live",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "repo": "https://github.com/scottconverse/civiccast-brief",
       "site": "https://scottconverse.github.io/civiccast-brief/",
       "live": "https://civiccastbrief.org",
@@ -368,10 +368,20 @@
       "program": "public-media",
       "line": "A station in a box: scheduling, playout, recording, captions and a resident portal.",
       "status": "beta",
-      "version": "1.0.0-rc.7",
+      "version": "1.0.0-rc.8",
       "repo": "https://github.com/scottconverse/civiccast",
       "site": "https://scottconverse.github.io/civiccast/",
       "localAI": "Offline captions with Whistle and Whisper, summaries through Ollama"
+    },
+    {
+      "name": "CivicCast Lite",
+      "program": "public-media",
+      "line": "A smaller CivicCast for smaller stations: live meetings and recorded shows to cable, YouTube and your own viewer website.",
+      "status": "preview",
+      "version": "0.1.0.13",
+      "repo": "https://github.com/scottconverse/civiccast-lite",
+      "site": "https://scottconverse.github.io/civiccast-lite/",
+      "docs": "https://github.com/scottconverse/civiccast-lite/blob/main/docs/USER-MANUAL.md"
     },
     {
       "name": "Describer Workbench",
@@ -396,7 +406,7 @@
       "program": "makers",
       "line": "Local AI CAD: a plain-English idea becomes editable, checked, sliced CAD.",
       "status": "released",
-      "version": "1.4.0",
+      "version": "1.5.1",
       "repo": "https://github.com/scottconverse/TinkerQuarry",
       "site": "https://scottconverse.github.io/TinkerQuarry/",
       "localAI": "Local model by default, no cloud unless you set one up"
@@ -406,7 +416,7 @@
       "program": "makers",
       "line": "Describe a part, or show a photo or sketch, and get a print-ready file.",
       "status": "beta",
-      "version": "0.9.0b3",
+      "version": "0.9.3",
       "repo": "https://github.com/scottconverse/KimCadClaude",
       "site": "https://scottconverse.github.io/KimCadClaude/",
       "localAI": "Runs on your computer with Ollama, CPU-only path"
@@ -448,6 +458,14 @@
       "localAI": "Local mode: Ollama and Gemma 4, fully offline"
     },
     {
+      "name": "PatentForge Lite",
+      "program": "everyday",
+      "line": "A native desktop app for patent work: feasibility, claims, compliance and a full application draft, kept on your machine.",
+      "status": "released",
+      "version": "0.1.0",
+      "repo": "https://github.com/scottconverse/patent-forge-lite"
+    },
+    {
       "name": "Local AI Control Center",
       "program": "everyday",
       "line": "Run Ollama, OpenHands and Open WebUI on Windows without the terminal.",
@@ -479,7 +497,7 @@
       "program": "everyday",
       "line": "A desktop app for OpenClaw. No terminal.",
       "status": "released",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "repo": "https://github.com/scottconverse/klodock",
       "site": "https://scottconverse.github.io/klodock/",
       "localAI": "Runs OpenClaw against local Ollama models"
@@ -621,7 +639,7 @@
       "name": "Rigwell",
       "line": "A local workbench for coding agents: workstreams, missions, review and pull requests.",
       "status": "beta",
-      "version": "0.4.4",
+      "version": "0.4.6",
       "repo": "https://github.com/scottconverse/rigwell",
       "site": "https://scottconverse.github.io/rigwell/"
     },
@@ -721,7 +739,7 @@
       "name": "prompttools",
       "line": "Lint, format, test and cost out LLM prompt files.",
       "status": "released",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/scottconverse/prompttools",
       "site": "https://scottconverse.github.io/prompttools/"
     },
@@ -759,7 +777,7 @@
       "name": "DSH Halo for Windows",
       "line": "A community configuration for DeepSeek Harness with research tools.",
       "status": "preview",
-      "version": "0.1.4",
+      "version": "0.3.20",
       "repo": "https://github.com/scottconverse/dsh-halo-research",
       "site": "https://scottconverse.github.io/dsh-halo-research/"
     },

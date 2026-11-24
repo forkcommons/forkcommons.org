@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-type Status = "live" | "released" | "beta" | "preview" | "development" | "archived" | "planned";
+type Status = "live" | "released" | "beta" | "preview" | "development" | "parked" | "archived" | "planned";
 type Blaze = "circle" | "square" | "diamond" | "triangle" | "bar";
 interface Program { id: string; name: string; domain?: string; for: string; summary: string; org: string; site?: string; release?: { label: string; url: string; summary: string }; blaze: Blaze }
 interface Item {
@@ -28,7 +28,7 @@ const esc = (s: string): string =>
 
 const STATUS_LABEL: Record<Status, string> = {
   live: "Live", released: "Released", beta: "Beta", preview: "Preview",
-  development: "In development", archived: "Archived", planned: "Planned",
+  development: "In development", parked: "Parked", archived: "Archived", planned: "Planned",
 };
 const shipping = (s?: Status): boolean => s === "live" || s === "released" || s === "beta" || s === "preview";
 const byProgram = (id: string): Item[] => data.products.filter((p) => p.program === id);
@@ -280,7 +280,7 @@ function townHall(): string {
   const gears = [[392, 398, 24], [436, 420, 16], [358, 428, 14]].map(([x, y, r]) => `<g transform="translate(${x},${y})"><circle r="${r}" class="th-gear"/><circle r="${r * 0.4}" class="th-gearhole"/>${[0, 45, 90, 135].map((a) => `<rect x="${-r * 0.18}" y="${-r * 1.28}" width="${r * 0.36}" height="${r * 2.56}" rx="2" transform="rotate(${a})" class="th-gear"/>`).join("")}</g>`).join("");
   return `<svg class="hall" viewBox="0 0 1120 640" role="img" aria-labelledby="th-t th-d">
 <title id="th-t">How TownLight is built</title>
-<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with eight product workspaces. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
+<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each product. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
 <path d="M0 470 H1120" class="th-ground"/>
 <rect x="0" y="470" width="1120" height="170" class="th-earth"/>
 <path d="M${L - 20} 120 L${(L + R) / 2} 40 L${R + 20} 120 Z" class="th-roof"/>
@@ -452,7 +452,7 @@ ${opts.uses ? `<td><span class="uses">${(i.usedBy ?? []).map((u) => `<a href="${
 // ---------- shared sections ----------
 const picksFor = (id: string, n = 4): Item[] => {
   const order: Status[] = ["live", "released", "beta", "preview", "development"];
-  return [...byProgram(id)].sort((a, b) => order.indexOf(a.status!) - order.indexOf(b.status!)).slice(0, n);
+  return [...byProgram(id)].filter((i) => i.status !== "parked").sort((a, b) => order.indexOf(a.status!) - order.indexOf(b.status!)).slice(0, n);
 };
 const trails = data.programs.map((p) => {
   const items = byProgram(p.id);
@@ -500,7 +500,7 @@ const home = `<section class="hero">${topo()}<div class="wrap">
 <section class="facts" aria-label="At a glance"><ul>
 <li><strong>${total}</strong>products across five programs</li>
 <li><strong>${totalShip}</strong>shipping today</li>
-<li><strong>13</strong>TownLight modules in the Windows beta</li>
+<li><strong>16</strong>TownLight modules in the Windows beta, plus Core</li>
 <li><strong>${liveTowns}</strong>Colorado towns on CivicCast Brief</li>
 <li><strong>${localCount}</strong>products run on local AI</li>
 <li><strong>$0</strong>in license fees, ever</li>
@@ -620,6 +620,7 @@ ${p.id === "public-media" ? `<section class="section"><div class="wrap">
 <section class="section"><div class="wrap">
 ${ledger("Shipping now", items.filter((i) => shipping(i.status)))}
 ${ledger("In development", items.filter((i) => i.status === "development"))}
+${ledger("Parked prototypes, not in the Windows release", items.filter((i) => i.status === "parked"))}
 </div></section>`;
   writeFileSync(join(out, pageFor(p.id)), layout(pageFor(p.id), p.name, p.summary, body));
 }
