@@ -274,13 +274,14 @@ function flow(id: string, custom?: [string, string, string][], label?: string): 
 // ---------- Real TownLight architecture, redrawn ----------
 // Source: townlight/townlight README (Architecture, Connected workflows) and townlight.github.io/assets/*.svg
 function townHall(): string {
-  const ws = ["Records", "Meetings", "Code", "Zoning", "Planning", "Permitting", "Inspections", "Core"];
-  const L = 150, R = 770, wsW = (R - L - 40) / ws.length;
-  const windows = ws.map((n, i) => { const x = L + 20 + i * wsW; return `<g><rect x="${x + 6}" y="148" width="${wsW - 12}" height="58" rx="4" class="th-win"/><path d="M${x + 6} 164 H${x + wsW - 6}" class="th-awn"/><text x="${x + wsW / 2}" y="224" text-anchor="middle" class="th-ws">${n}</text></g>`; }).join("");
+  const ws = ["Records", "Meetings", "Code", "Zoning", "Planning", "Permitting", "Inspections", "Notice",
+    "Access", "Boards", "Contracts", "Procurement", "Budget", "Grants", "Data", "Core"];
+  const L = 150, R = 770, perRow = 8, wsW = (R - L - 40) / perRow;
+  const windows = ws.map((n, i) => { const x = L + 20 + (i % perRow) * wsW, y = 152 + Math.floor(i / perRow) * 40; return `<g><rect x="${x + 6}" y="${y}" width="${wsW - 12}" height="18" rx="3" class="th-win"/><path d="M${x + 6} ${y + 6} H${x + wsW - 6}" class="th-awn"/><text x="${x + wsW / 2}" y="${y + 32}" text-anchor="middle" class="th-ws">${n}</text></g>`; }).join("");
   const gears = [[392, 398, 24], [436, 420, 16], [358, 428, 14]].map(([x, y, r]) => `<g transform="translate(${x},${y})"><circle r="${r}" class="th-gear"/><circle r="${r * 0.4}" class="th-gearhole"/>${[0, 45, 90, 135].map((a) => `<rect x="${-r * 0.18}" y="${-r * 1.28}" width="${r * 0.36}" height="${r * 2.56}" rx="2" transform="rotate(${a})" class="th-gear"/>`).join("")}</g>`).join("");
   return `<svg class="hall" viewBox="0 0 1120 640" role="img" aria-labelledby="th-t th-d">
 <title id="th-t">How TownLight is built</title>
-<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each product. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
+<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each of the 15 desktop modules (Records, Meetings, Code, Zoning, Planning, Permitting, Inspections, Notice, Access, Boards and Commissions, Contracts, Procurement, Budget, Grants and Data) and Core. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
 <path d="M0 470 H1120" class="th-ground"/>
 <rect x="0" y="470" width="1120" height="170" class="th-earth"/>
 <path d="M${L - 20} 120 L${(L + R) / 2} 40 L${R + 20} 120 Z" class="th-roof"/>
@@ -331,24 +332,27 @@ function routeMap(): string {
   const S: Record<string, [number, number]> = {
     Meetings: [150, 200], Station: [330, 90], Records: [590, 90], Release: [870, 90],
     Code: [370, 230], Zoning: [590, 230], Permitting: [790, 230], Inspections: [980, 230], Planning: [150, 360],
+    Procurement: [150, 480], Contracts: [370, 480], Data: [790, 480], Grants: [150, 580], Budget: [590, 580],
   };
   const route = (names: string[]) => names.map((n, i) => `${i ? "L" : "M"}${S[n][0]} ${S[n][1]}`).join(" ");
-  const routes: [string, string, string[], number][] = [
-    ["r1", "A meeting becomes a records response", ["Meetings", "Station", "Records", "Release"], 0],
-    ["r2", "A new law becomes cited staff guidance", ["Meetings", "Code", "Zoning", "Permitting", "Inspections"], 0],
-    ["r3", "Policy and land use reach the public record", ["Planning", "Zoning", "Permitting", "Records"], 0],
+  // r4 has two branches that meet at Data.
+  const routes: [string, string, string[][]][] = [
+    ["r1", "A meeting becomes a records response", [["Meetings", "Station", "Records", "Release"]]],
+    ["r2", "A new law becomes cited staff guidance", [["Meetings", "Code", "Zoning", "Permitting", "Inspections"]]],
+    ["r3", "Policy and land use reach the public record", [["Planning", "Zoning", "Permitting", "Records"]]],
+    ["r4", "Contracts and budgets become reviewed open data", [["Procurement", "Contracts", "Data"], ["Grants", "Budget", "Data"]]],
   ];
-  const stations = Object.entries(S).map(([n, [x, y]]) => `<g><circle cx="${x}" cy="${y}" r="15" class="rm-st"/><text x="${x}" y="${y + (y > 300 ? 42 : y < 120 ? -26 : 44)}" text-anchor="middle" class="rm-n">${n === "Release" ? "Public release" : n}</text></g>`).join("");
-  const legend = routes.map(([c, t], i) => `<g transform="translate(${30 + i * 360},440)"><path d="M0 0 H44" class="rm-${c}"/><text x="56" y="6" class="rm-lg">${t}</text></g>`).join("");
-  return `<svg class="routes" viewBox="0 0 1120 470" role="img" aria-labelledby="rm-t rm-d">
+  const stations = Object.entries(S).map(([n, [x, y]]) => `<g><circle cx="${x}" cy="${y}" r="15" class="rm-st"/><text x="${x}" y="${y < 120 ? y - 26 : y + 44}" text-anchor="middle" class="rm-n">${n === "Release" ? "Public release" : n}</text></g>`).join("");
+  const legend = routes.map(([c, t], i) => `<g transform="translate(${30 + (i % 2) * 560},${790 + Math.floor(i / 2) * 36})"><path d="M0 0 H44" class="rm-${c}"/><text x="56" y="6" class="rm-lg">${t}</text></g>`).join("");
+  return `<svg class="routes" viewBox="0 0 1120 860" role="img" aria-labelledby="rm-t rm-d">
 <title id="rm-t">How TownLight's products connect</title>
-<desc id="rm-d">${esc(routes.map(([, t, n]) => `${t}: ${n.join(", then ")}`).join(". "))}. Core sits under all of them.</desc>
-<rect x="20" y="300" width="1080" height="0" />
-${routes.map(([c, , n]) => `<path d="${route(n)}" class="rm-${c}"/>`).join("")}
+<desc id="rm-d">${esc(routes.map(([, t, b]) => `${t}: ${b.map((n) => n.join(", then ")).join("; and ")}`).join(". "))}. Core sits under all of them, with Notice, Access and Boards and Commissions alongside.</desc>
+${routes.map(([c, , b]) => b.map((n) => `<path d="${route(n)}" class="rm-${c}"/>`).join("")).join("")}
 ${stations}
-<rect x="300" y="330" width="790" height="60" rx="8" class="rm-core"/>
-<text x="695" y="356" text-anchor="middle" class="rm-ct">Core, under every route</text>
-<text x="695" y="378" text-anchor="middle" class="rm-cs">Shared accounts and sign-in, task helpers, and coherent backup and recovery</text>
+<rect x="30" y="660" width="1060" height="84" rx="8" class="rm-core"/>
+<text x="560" y="690" text-anchor="middle" class="rm-ct">Core, under every route</text>
+<text x="560" y="714" text-anchor="middle" class="rm-cs">Shared accounts and sign-in, task helpers, and coherent backup and recovery.</text>
+<text x="560" y="734" text-anchor="middle" class="rm-cs">Notice, Access and Boards &amp; Commissions work alongside any route.</text>
 ${legend}
 </svg>`;
 }
@@ -608,7 +612,7 @@ ${p.id === "townlight" ? `<section class="section"><div class="wrap">
 <div class="figwrap">${townHall()}</div>
 </div></section>
 <section class="section"><div class="wrap">
-<div class="head"><h2>How the work connects</h2><p>Three of the routes TownLight supports today. Each stop keeps its own decisions; a handoff never quietly transfers authority.</p></div>
+<div class="head"><h2>How the work connects</h2><p>Four of the routes TownLight supports today. Each stop keeps its own decisions; a handoff never quietly transfers authority.</p></div>
 <div class="figwrap">${routeMap()}</div>
 <p class="legend-note">Drawn from the TownLight suite manual's connected workflows and architecture. <a href="https://townlight.github.io/manuals/suite.html#connected-workflows">Read the manual</a></p>
 </div></section>` : ""}
