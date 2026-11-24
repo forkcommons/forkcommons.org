@@ -133,6 +133,13 @@
     "checked": "2026-11-19"
   },
   {
+    "repo": "scottconverse/civiccast-lite",
+    "url": "https://scottconverse.github.io/civiccast-lite/",
+    "host": "github-pages",
+    "status": "verified",
+    "checked": "2026-11-24"
+  },
+  {
     "repo": "scottconverse/civiccast-releases",
     "url": null,
     "host": null,
@@ -355,6 +362,13 @@
     "host": "github-pages",
     "status": "verified",
     "checked": "2026-11-19"
+  },
+  {
+    "repo": "scottconverse/patent-forge-lite",
+    "url": null,
+    "host": null,
+    "status": "none",
+    "checked": "2026-11-24"
   },
   {
     "repo": "scottconverse/patentforge",

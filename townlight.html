@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TownLight | Fork Commons</title>
-<meta name="description" content="A municipal operations suite: records, meetings, codes, zoning, permits and station work, installed on the town's own computer and run by its own staff.">
+<meta name="description" content="A municipal operations suite of 16 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility and meeting recording. Installed on the town's own computer and run by its own staff.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@600;700;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -27,9 +27,9 @@
 <div class="text">
 <p class="muted"><strong>townlight.org</strong></p>
 <h1>TownLight</h1>
-<p class="lede">A municipal operations suite: records, meetings, codes, zoning, permits and station work, installed on the town's own computer and run by its own staff.</p>
+<p class="lede">A municipal operations suite of 16 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility and meeting recording. Installed on the town's own computer and run by its own staff.</p>
 <p class="legend-note"><strong>Townlight Windows beta 1.9.3.2:</strong> Published 2026-11-24T05:50:39Z. Private Records attachment downloads with integrity checks and a Station renewal control fix. Signed MSI direct-upgrade and lifecycle checks passed; an initial fresh-maintenance fixture failed. After fixture-only correction with no MSI rebuild, exact-artifact run 45328280431 passed. Windows 1.9.3.1 remains preserved as the previous release. <a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2">Release notes and signed installer</a>.</p>
-<div class="meta"><span>For <strong>town halls, clerks, planners and public media stations</strong></span><span><strong>16 shipping, 10 in development</strong></span><a href="https://townlight.github.io/">TownLight website</a><a href="https://github.com/townlight">Code on GitHub</a></div>
+<div class="meta"><span>For <strong>town halls, clerks, planners and public media stations</strong></span><span><strong>16 shipping</strong></span><a href="https://townlight.github.io/">TownLight website</a><a href="https://github.com/townlight">Code on GitHub</a></div>
 </div>
 </div></section>
 <section class="section flow-sec"><div class="wrap"><div class="figwrap"><svg class="flow" viewBox="0 0 1100 210" role="img" aria-label="TownLight workflow: Capture, then Decide, then Codify, then Serve, then Release"><path d="M110 78 C220 116 220 116 330 78 C440 40 440 40 550 78 C660 116 660 116 770 78 C880 40 880 40 990 78" class="fl-trail"/><g transform="translate(110,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><rect x="6" y="15" width="26" height="20" rx="3"/><path d="M32 21 L42 15 V35 L32 29 Z"/><circle cx="14" cy="11" r="4"/><circle cx="24" cy="11" r="4"/></g></g>
@@ -42,7 +42,7 @@
 <div class="head"><h2>How TownLight is built</h2><p>Every request carries the sign-in of the person who made it, the city's rules live in one place, and the original files never get overwritten. Station records meetings from its own annex.</p></div>
 <div class="figwrap"><svg class="hall" viewBox="0 0 1120 640" role="img" aria-labelledby="th-t th-d">
 <title id="th-t">How TownLight is built</title>
-<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with eight product workspaces. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
+<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each product. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
 <path d="M0 470 H1120" class="th-ground"/>
 <rect x="0" y="470" width="1120" height="170" class="th-earth"/>
 <path d="M130 120 L460 40 L790 120 Z" class="th-roof"/>
@@ -108,7 +108,7 @@
 <div class="ledger-wrap"><table class="ledger"><caption>Shipping now</caption><thead><tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">Links</th></tr></thead><tbody><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/records/">Records</a></td>
 
-<td class="what">From request intake to a deliberate, reviewed release.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
+<td class="what">From request intake to a reviewed release, with private attachments and verified staff downloads.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
 
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/records/">Website</a><a href="https://townlight.github.io/manuals/records.html">Manual</a><a href="https://github.com/townlight/sunshine">Code</a></td>
@@ -152,7 +152,7 @@
 
 <td class="what">Field evidence preserved and every draft finding reviewed.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
 
-<td class="st"><span class="status status-beta">Beta</span></td>
+<td class="st"><span class="status status-preview">Preview</span></td>
 <td class="links"><a href="https://townlight.github.io/products/inspections/">Website</a><a href="https://townlight.github.io/manuals/inspections.html">Manual</a><a href="https://github.com/townlight/inspect">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/station/">Station</a></td>
@@ -164,7 +164,7 @@
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/access/">Access</a></td>
 
-<td class="what">Accessibility, plain-language and ADA Title II review, with a record proving you checked.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
+<td class="what">Accessibility and publication review, plain-language rewrites and translation drafts, with a record proving you checked.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
 
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/access/">Website</a><a href="https://townlight.github.io/manuals/access.html">Manual</a><a href="https://github.com/townlight/access">Code</a></td>
@@ -185,14 +185,14 @@
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/contracts/">Contracts</a></td>
 
-<td class="what">A central contract registry with clause topics, expirations and renewals.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
+<td class="what">A register of agreements, vendors, responsible staff, signed PDFs and renewal dates, linked to Procurement awards.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
 
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/contracts/">Website</a><a href="https://github.com/townlight/contracts">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/procurement/">Procurement</a></td>
 
-<td class="what">RFP drafting, proposal comparison, scoring summaries and award packets.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
+<td class="what">RFP workpapers, proposal summaries, staff scoring, recorded award decisions and linked contract drafts.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
 
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/procurement/">Website</a><a href="https://github.com/townlight/procure">Code</a></td>
@@ -218,75 +218,76 @@
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/grants/">Website</a><a href="https://github.com/townlight/grants/blob/main/USER-MANUAL.md">Manual</a><a href="https://github.com/townlight/grants">Code</a></td>
 </tr></tbody></table></div>
-<div class="ledger-wrap"><table class="ledger"><caption>In development</caption><thead><tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">Links</th></tr></thead><tbody><tr>
+
+<div class="ledger-wrap"><table class="ledger"><caption>Parked prototypes, not in the Windows release</caption><thead><tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">Links</th></tr></thead><tbody><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/311/">311</a></td>
 
 <td class="what">Resident service requests, triage and routing, with Open311 export.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/311/">Website</a><a href="https://github.com/townlight/311">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/comms/">Communications</a></td>
 
 <td class="what">Source-backed explainers, meeting summaries and newsletters.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/comms/">Website</a><a href="https://github.com/townlight/comms">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/court/">Courts</a></td>
 
 <td class="what">Cited procedure answers and hearing prep for municipal court clerks.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/court/">Website</a><a href="https://github.com/townlight/court">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/elections/">Elections</a></td>
 
 <td class="what">Cited voter guidance, filing checklists and canvass workpapers.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/elections/">Website</a><a href="https://github.com/townlight/elections">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/hr/">HR</a></td>
 
 <td class="what">Personnel-policy lookups and handbook summaries.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/hr/">Website</a><a href="https://github.com/townlight/hr">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/legal/">Legal</a></td>
 
 <td class="what">Privilege-aware, citation-first research across city records.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/legal/">Website</a><a href="https://github.com/townlight/legal">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/library/">Library</a></td>
 
 <td class="what">Cited policy and program answers for municipal libraries.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/library/">Website</a><a href="https://github.com/townlight/library">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/parks/">Parks</a></td>
 
 <td class="what">Parks and recreation policy, programs and maintenance triage.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/parks/">Website</a><a href="https://github.com/townlight/parks">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/safety/">Safety</a></td>
 
 <td class="what">Public-safety administrative support: SOP answers, training and PIO drafts.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/safety/">Website</a><a href="https://github.com/townlight/safety">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/utility/">Utilities</a></td>
 
 <td class="what">Utility customer-service support with cited policy answers.</td>
 
-<td class="st"><span class="status status-development">In development</span></td>
+<td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/utility/">Website</a><a href="https://github.com/townlight/utility">Code</a></td>
 </tr></tbody></table></div>
 </div></section>
