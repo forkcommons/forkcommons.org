@@ -124,6 +124,7 @@
     },
     {
       "name": "Station",
+      "alsoIn": ["public-media"],
       "program": "townlight",
       "line": "Captures the public meeting and preserves its recording as evidence.",
       "status": "beta",
@@ -449,6 +450,7 @@
     },
     {
       "name": "PatentForge",
+      "alsoIn": ["makers"],
       "program": "everyday",
       "line": "Patent research and drafting, fully local or with a cloud model.",
       "status": "released",
@@ -459,6 +461,7 @@
     },
     {
       "name": "PatentForge Lite",
+      "alsoIn": ["makers"],
       "program": "everyday",
       "line": "A native desktop app for patent work: feasibility, claims, compliance and a full application draft, kept on your machine.",
       "status": "released",
@@ -537,6 +540,7 @@
     },
     {
       "name": "TextFlowKit",
+      "alsoIn": ["public-media"],
       "role": "Transcription",
       "line": "Turns meeting video and audio into timestamped transcripts and subtitles.",
       "status": "released",
