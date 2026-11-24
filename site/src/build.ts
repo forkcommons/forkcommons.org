@@ -493,7 +493,7 @@ const home = `<section class="hero">${topo()}<div class="wrap">
 <section class="facts" aria-label="At a glance"><ul>
 <li><strong>${total}</strong>products across five programs</li>
 <li><strong>${totalShip}</strong>shipping today</li>
-<li><strong>16</strong>TownLight modules in the Windows beta, plus Core</li>
+<li><strong>17</strong>TownLight modules in the Windows beta (16 functional modules plus the Core platform service)</li>
 <li><strong>${liveTowns}</strong>Colorado towns on CivicCast Brief</li>
 <li><strong>${localCount}</strong>products run on local AI</li>
 <li><strong>$0</strong>in license fees, ever</li>
