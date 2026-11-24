@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The shared core | Fork Commons</title>
+<meta name="description" content="The shared components under every Fork Commons program, and the planned community AI utility.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@600;700;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+<a class="mark wood routed" href="index.html"><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 3v12"/><path d="M5 10.5c0-3.5 8-3 8-6.5V3"/></g><circle cx="5" cy="15" r="2" fill="currentColor"/><circle cx="13" cy="3" r="2" fill="currentColor"/><circle cx="5" cy="3" r="2" fill="currentColor"/></svg><span>Fork Commons</span></a>
+<nav aria-label="Main" class="nav-wide"><ul class="nav">
+<li><details class="drop"><summary>Programs</summary><ul><li><a href="townlight.html"><svg class="mini" viewBox="0 0 52 52" aria-hidden="true" focusable="false"><rect class="bark" x="4" y="0" width="44" height="52" rx="10"/><circle class="blaze" cx="26" cy="26" r="13"/></svg>TownLight</a></li><li><a href="local-news.html"><svg class="mini" viewBox="0 0 52 52" aria-hidden="true" focusable="false"><rect class="bark" x="4" y="0" width="44" height="52" rx="10"/><rect class="blaze" x="15" y="15" width="22" height="22" rx="1.5"/></svg>Local News Network</a></li><li><a href="public-media.html"><svg class="mini" viewBox="0 0 52 52" aria-hidden="true" focusable="false"><rect class="bark" x="4" y="0" width="44" height="52" rx="10"/><rect class="blaze" x="16" y="16" width="20" height="20" transform="rotate(45 26 26)"/></svg>PublicCast</a></li><li><a href="makers.html"><svg class="mini" viewBox="0 0 52 52" aria-hidden="true" focusable="false"><rect class="bark" x="4" y="0" width="44" height="52" rx="10"/><path class="blaze" d="M26 11 L40 37 L12 37 Z"/></svg>TinkerCommons</a></li><li><a href="everyday.html"><svg class="mini" viewBox="0 0 52 52" aria-hidden="true" focusable="false"><rect class="bark" x="4" y="0" width="44" height="52" rx="10"/><rect class="blaze" x="19" y="9" width="14" height="34" rx="1.5"/></svg>Everyday</a></li></ul></details></li>
+<li><a href="core.html" aria-current="page">The core</a></li><li><a href="community-ai.html">Community AI</a></li><li><a href="workshop.html">Workshop</a></li><li><a href="about.html">About</a></li>
+<li><a class="nav-cta" href="get-involved.html">Get involved</a></li>
+</ul></nav>
+<details class="menu"><summary aria-label="Open menu">Menu</summary><nav aria-label="Main, small screens"><ul class="nav"><li><a href="index.html">Home</a></li><li><a href="townlight.html">TownLight</a></li><li><a href="local-news.html">Local News Network</a></li><li><a href="public-media.html">PublicCast</a></li><li><a href="makers.html">TinkerCommons</a></li><li><a href="everyday.html">Everyday</a></li><li><a href="core.html" aria-current="page">The core</a></li><li><a href="community-ai.html">Community AI</a></li><li><a href="workshop.html">Workshop</a></li><li><a href="about.html">About</a></li><li><a href="get-involved.html">Get involved</a></li></ul></nav></details>
+</div></header>
+<main id="main">
+<section class="page-head plain"><div class="wrap"><div class="text">
+<h1>The shared core</h1>
+<p class="lede">The parts every program needs, built once: turning recordings into text, pulling records from the systems towns already use, answering questions with the source attached, and soon, the intelligence underneath it all.</p>
+</div></div></section>
+<section class="section"><div class="wrap"><div class="ledger-wrap"><table class="coremap"><caption>Which program uses which shared part</caption><thead><tr><th scope="col" class="cm-part">Shared part</th><th scope="col"><a href="townlight.html">TownLight</a></th><th scope="col"><a href="local-news.html">Local News Network</a></th><th scope="col"><a href="public-media.html">PublicCast</a></th><th scope="col"><a href="makers.html">TinkerCommons</a></th><th scope="col"><a href="everyday.html">Everyday</a></th></tr></thead><tbody><tr><th scope="row" class="cm-part"><span class="cm-name">Local AI layer</span><span class="cm-role">Every product can run on models on your own computer through Ollama, LM Studio or llama.cpp, with speech-to-text from Whisper. Cloud models are a choice, never a requirement.</span></th><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td></tr><tr><th scope="row" class="cm-part"><span class="cm-name">TextFlowKit</span><span class="cm-role">Turns meeting video and audio into timestamped transcripts and subtitles.</span></th><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td></tr><tr><th scope="row" class="cm-part"><span class="cm-name">QuorumRelay</span><span class="cm-role">Finds and retrieves public records from the systems towns already use, with the source attached.</span></th><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td></tr><tr><th scope="row" class="cm-part"><span class="cm-name">Siftwing</span><span class="cm-role">Answers questions from retained records and opens the passage behind each citation.</span></th><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td></tr><tr><th scope="row" class="cm-part"><span class="cm-name">TownLight Core and Runtime</span><span class="cm-role">Shared accounts, audit trail, retained originals and a local runtime for every TownLight product.</span></th><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td></tr><tr><th scope="row" class="cm-part"><span class="cm-name">Halo Research Gateway</span><span class="cm-role">One source-backed search and research service for local AI clients.</span></th><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-none" role="img" aria-label="Does not use"></span></td><td><span class="cm-dot" role="img" aria-label="Uses"></span></td></tr><tr><th scope="row" class="cm-part"><span class="cm-name">Community AI Utility <em>(planned)</em></span><span class="cm-role">Openly licensed models on community-owned machines, behind one gateway that meters use, enforces the rules and can rent overflow from competing hosts.</span></th><td><span class="cm-dot planned" role="img" aria-label="Will use"></span></td><td><span class="cm-dot planned" role="img" aria-label="Will use"></span></td><td><span class="cm-dot planned" role="img" aria-label="Will use"></span></td><td><span class="cm-dot planned" role="img" aria-label="Will use"></span></td><td><span class="cm-dot planned" role="img" aria-label="Will use"></span></td></tr></tbody></table></div>
+<p class="legend-note"><span class="cm-dot"></span> uses it today &nbsp; <span class="cm-dot planned"></span> will use it (planned) &nbsp; <span class="cm-none"></span> does not use it</p></div></section>
+<section class="section flow-sec"><div class="wrap">
+<div class="head"><h2>Inside TownLight Core: how a town's records stay safe</h2><p>Core is the foundation under every TownLight product. This is its main path, from a named sign-in to a backup you can actually restore.</p></div>
+<div class="figwrap"><svg class="flow" viewBox="0 0 1100 210" role="img" aria-label="TownLight Core safekeeping workflow: Sign in, then Check health, then Apply the rules, then Keep every version, then Back up, then Restore"><path d="M91.66666666666667 78 C183.33333333333334 116 183.33333333333331 116 275 78 C366.6666666666667 40 366.6666666666667 40 458.33333333333337 78 C550 116 550 116 641.6666666666666 78 C733.3333333333333 40 733.3333333333334 40 825 78 C916.6666666666666 116 916.6666666666667 116 1008.3333333333334 78" class="fl-trail"/><g transform="translate(91.66666666666667,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><circle cx="24" cy="15" r="8"/><path d="M9 41 C9 30 16 26 24 26 C32 26 39 30 39 41"/></g></g>
+<text x="91.66666666666667" y="166" text-anchor="middle" class="fl-t">Sign in</text><text x="91.66666666666667" y="188" text-anchor="middle" class="fl-s">A named staff account</text><g transform="translate(275,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><circle cx="24" cy="24" r="16"/><path d="M16 24 L22 30 L33 18"/></g></g>
+<text x="275" y="166" text-anchor="middle" class="fl-t">Check health</text><text x="275" y="188" text-anchor="middle" class="fl-s">Setup, settings, readiness</text><g transform="translate(458.33333333333337,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><circle cx="24" cy="24" r="7"/><path d="M24 6 V12 M24 36 V42 M6 24 H12 M36 24 H42 M11 11 L15 15 M33 33 L37 37 M37 11 L33 15 M15 33 L11 37"/><circle cx="24" cy="24" r="13"/></g></g>
+<text x="458.33333333333337" y="166" text-anchor="middle" class="fl-t">Apply the rules</text><text x="458.33333333333337" y="188" text-anchor="middle" class="fl-s">Identity and validation</text><g transform="translate(641.6666666666666,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><rect x="10" y="21" width="28" height="20" rx="3"/><path d="M16 21 V15 C16 6 32 6 32 15 V21"/><circle cx="24" cy="31" r="3"/></g></g>
+<text x="641.6666666666666" y="166" text-anchor="middle" class="fl-t">Keep every version</text><text x="641.6666666666666" y="188" text-anchor="middle" class="fl-s">Originals and provenance</text><g transform="translate(825,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><rect x="7" y="14" width="34" height="24" rx="3"/><circle cx="24" cy="26" r="7"/><path d="M17 14 L20 9 H28 L31 14"/></g></g>
+<text x="825" y="166" text-anchor="middle" class="fl-t">Back up</text><text x="825" y="188" text-anchor="middle" class="fl-s">Stop writers, then snapshot</text><g transform="translate(1008.3333333333334,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><rect x="12" y="7" width="24" height="34" rx="2"/><circle cx="30" cy="25" r="2"/><path d="M6 41 H42"/></g></g>
+<text x="1008.3333333333334" y="166" text-anchor="middle" class="fl-t">Restore</text><text x="1008.3333333333334" y="188" text-anchor="middle" class="fl-s">Start, then check it</text></svg></div>
+<p class="legend-note">Drawn from TownLight Core's architecture. <a href="https://townlight.github.io/manuals/core.html">Read the Core manual</a></p>
+</div></section>
+<section class="section"><div class="wrap"><div class="ledger-wrap"><table class="ledger"><caption>Components</caption><thead><tr><th scope="col">Component</th><th scope="col">Job</th><th scope="col">What it does</th><th scope="col">Serves</th><th scope="col">Status</th><th scope="col">Links</th></tr></thead><tbody><tr>
+<td class="name"><a class="pname" href="https://scottconverse.github.io/local-ai-control-center/landing/">Local AI layer</a></td>
+<td>Your own models</td>
+<td class="what">Every product can run on models on your own computer through Ollama, LM Studio or llama.cpp, with speech-to-text from Whisper. Cloud models are a choice, never a requirement.</td>
+<td><span class="uses"><a href="townlight.html">TownLight</a><a href="local-news.html">Local News Network</a><a href="public-media.html">PublicCast</a><a href="makers.html">TinkerCommons</a><a href="everyday.html">Everyday</a></span></td>
+<td class="st"><span class="status status-released">Released</span></td>
+<td class="links"><a href="https://scottconverse.github.io/local-ai-control-center/landing/">Website</a><a href="https://github.com/scottconverse/local-ai-control-center">Code</a></td>
+</tr><tr>
+<td class="name"><a class="pname" href="https://www.textflowkit.org/">TextFlowKit</a><span class="ver">0.1.19</span></td>
+<td>Transcription</td>
+<td class="what">Turns meeting video and audio into timestamped transcripts and subtitles.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Local speech-to-text with Whistle and Whisper</span></span></td>
+<td><span class="uses"><a href="townlight.html">TownLight</a><a href="local-news.html">Local News Network</a><a href="public-media.html">PublicCast</a></span></td>
+<td class="st"><span class="status status-released">Released</span></td>
+<td class="links"><a href="https://www.textflowkit.org/">Website</a><a href="https://github.com/scottconverse/textflowkit">Code</a></td>
+</tr><tr>
+<td class="name"><a class="pname" href="https://townlight.github.io/quorumrelay/">QuorumRelay</a><span class="ver">0.1.0.dev15</span></td>
+<td>Civic data connectors</td>
+<td class="what">Finds and retrieves public records from the systems towns already use, with the source attached.</td>
+<td><span class="uses"><a href="townlight.html">TownLight</a><a href="local-news.html">Local News Network</a></span></td>
+<td class="st"><span class="status status-preview">Preview</span></td>
+<td class="links"><a href="https://townlight.github.io/quorumrelay/">Website</a><a href="https://github.com/townlight/quorumrelay">Code</a></td>
+</tr><tr>
+<td class="name"><a class="pname" href="https://scottconverse.github.io/siftwing/">Siftwing</a><span class="ver">0.1.0-dev.57</span></td>
+<td>Evidence search</td>
+<td class="what">Answers questions from retained records and opens the passage behind each citation.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Local research workspace, works with LM Studio</span></span></td>
+<td><span class="uses"><a href="local-news.html">Local News Network</a><a href="everyday.html">Everyday</a></span></td>
+<td class="st"><span class="status status-preview">Preview</span></td>
+<td class="links"><a href="https://scottconverse.github.io/siftwing/">Website</a><a href="https://github.com/scottconverse/siftwing">Code</a></td>
+</tr><tr>
+<td class="name"><a class="pname" href="https://townlight.github.io/products/core/">TownLight Core and Runtime</a></td>
+<td>Records and identity</td>
+<td class="what">Shared accounts, audit trail, retained originals and a local runtime for every TownLight product.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Optional local model on the town's own computer. Works without AI too</span></span></td>
+<td><span class="uses"><a href="townlight.html">TownLight</a></span></td>
+<td class="st"><span class="status status-beta">Beta</span></td>
+<td class="links"><a href="https://townlight.github.io/products/core/">Website</a><a href="https://townlight.github.io/manuals/core.html">Manual</a><a href="https://github.com/townlight/core">Code</a></td>
+</tr><tr>
+<td class="name"><a class="pname" href="https://scottconverse.github.io/halo-research-gateway/">Halo Research Gateway</a><span class="ver">0.3.0</span></td>
+<td>Local research service</td>
+<td class="what">One source-backed search and research service for local AI clients.<span class="lai"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg><span>Research service for local AI clients</span></span></td>
+<td><span class="uses"><a href="everyday.html">Everyday</a><a href="local-news.html">Local News Network</a></span></td>
+<td class="st"><span class="status status-released">Released</span></td>
+<td class="links"><a href="https://scottconverse.github.io/halo-research-gateway/">Website</a><a href="https://github.com/scottconverse/halo-research-gateway">Code</a></td>
+</tr><tr>
+<td class="name">Community AI Utility</td>
+<td>Shared intelligence</td>
+<td class="what">Openly licensed models on community-owned machines, behind one gateway that meters use, enforces the rules and can rent overflow from competing hosts.</td>
+<td><span class="uses"><a href="townlight.html">TownLight</a><a href="local-news.html">Local News Network</a><a href="public-media.html">PublicCast</a><a href="makers.html">TinkerCommons</a><a href="everyday.html">Everyday</a></span></td>
+<td class="st"><span class="status status-planned">Planned</span></td>
+<td class="links"><span class="muted">Not yet</span></td>
+</tr></tbody></table></div></div></section>
+<section class="section"><div class="wrap"><div class="survey">
+<div>
+<span class="stake">Planned: in design now</span>
+<h2>Next: AI the community owns</h2>
+<p style="margin-top:16px">The civic tools here lean on AI. The next step is making sure that intelligence belongs to the community too, so a town that leaves one landlord doesn't move in with another.</p>
+<p style="margin-top:14px">The plan: own the core, rent the overflow, keep the switch. Openly licensed models run on machines the community owns, connected over Longmont's own fiber. One gateway meters every request, enforces the cooperative's rules, and can send overflow to whichever host is serving the same open models best that week.</p>
+</div>
+<div>
+<ul>
+<li><strong>Shared machines get more done.</strong> Serving many people at once lets one machine produce many times the output it would for a single user. That's the math that makes a town-sized utility work.</li>
+<li><strong>Open models are close behind.</strong> Independent tracking puts the best open models a matter of months behind the best closed ones, plenty for summarizing a meeting, searching records or drafting a grant letter.</li>
+<li><strong>Sensitive records stay home.</strong> City work runs on separate, locked-down hardware that never touches the public service.</li>
+<li><strong>Library card sign-in.</strong> Residents get an allowance, and the civic apps here become the first users on day one.</li>
+<li><strong>Neighbors can share capacity.</strong> Members can lend spare machines overnight, and town utilities can link up, settling accounts the way libraries handle interlibrary loans.</li>
+</ul>
+<p style="margin-top:16px"><a class="more" href="community-ai.html">See the full plan for a community AI utility</a></p>
+</div>
+</div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<div><h2>Fork Commons</h2><p>Free, open-source software for town halls, newsrooms, public media and workshops, held in trust for the public. Forming as a nonprofit.</p></div>
+<div><h2>Programs</h2><ul><li><a href="townlight.html">TownLight</a></li><li><a href="local-news.html">Local News Network</a></li><li><a href="public-media.html">PublicCast</a></li><li><a href="makers.html">TinkerCommons</a></li><li><a href="everyday.html">Everyday</a></li></ul></div>
+<div><h2>Read</h2><ul><li><a href="https://scottconverse.substack.com/p/open-source-the-world-all-of-it">Open-Source the World. All of It.</a></li><li><a href="core.html">The shared core</a></li><li><a href="community-ai.html">Community AI</a></li><li><a href="workshop.html">How it's built</a></li><li><a href="about.html">About</a></li></ul></div>
+<div><h2>Code</h2><ul><li><a href="https://github.com/forkcommons">Fork Commons on GitHub</a></li><li><a href="https://github.com/townlight">TownLight on GitHub</a></li><li><a href="https://github.com/scottconverse">Scott Converse on GitHub</a></li><li><a href="https://www.linkedin.com/in/scottgconverse/">Scott Converse on LinkedIn</a></li></ul></div>
+</div></footer>
+</body>
+</html>

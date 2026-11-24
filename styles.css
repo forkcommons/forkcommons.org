@@ -221,6 +221,27 @@ p { margin: 0; max-width: 64ch; }
 
 /* Ledgers */
 .ledger-wrap { overflow-x: auto; }
+.coremap { width: 100%; border-collapse: collapse; font-size: var(--s-1); }
+.coremap caption { text-align: left; font-family: var(--display); font-weight: 800; font-size: var(--s2); padding: 0 0 14px; }
+.coremap th, .coremap td { padding: 14px 10px; border-bottom: 1px solid var(--rule); text-align: center; vertical-align: middle; }
+.coremap thead th { font-weight: 700; border-bottom: 3px solid var(--ink); padding-top: 0; }
+.coremap thead th a { color: var(--ink); }
+.coremap .cm-part { text-align: left; padding-left: 0; min-width: 16rem; max-width: 26rem; }
+.coremap .cm-name { display: block; font-weight: 700; font-size: var(--s0); }
+.coremap .cm-name em { font-style: normal; font-weight: 400; color: var(--muted); }
+.coremap .cm-role { display: block; font-weight: 400; color: var(--muted); margin-top: 4px; }
+.cm-dot, .cm-none { display: inline-block; width: 18px; height: 18px; border-radius: 50%; vertical-align: middle; }
+.cm-dot { background: var(--forest); }
+.cm-dot.planned { background: transparent; border: 2.5px dashed var(--forest); }
+.cm-none { width: 10px; height: 2px; border-radius: 0; background: var(--rule); }
+@media (max-width: 640px) {
+  .coremap th, .coremap td { padding: 10px 4px; }
+  .coremap .cm-part { min-width: 0; padding-left: 0; }
+  .coremap .cm-role { display: none; }
+  .coremap .cm-name { font-size: var(--s-1); }
+  .coremap thead th:not(.cm-part) { writing-mode: vertical-rl; transform: rotate(180deg); text-align: left; font-size: 12px; padding: 6px 4px; }
+  .cm-dot { width: 14px; height: 14px; }
+}
 .ledger-wrap + .ledger-wrap { margin-top: 56px; }
 .ledger { width: 100%; border-collapse: collapse; font-size: var(--s-1); }
 .ledger caption { text-align: left; font-family: var(--display); font-weight: 800; font-size: var(--s2); padding: 0 0 14px; }

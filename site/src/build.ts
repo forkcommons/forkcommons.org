@@ -11,6 +11,7 @@ interface Item {
   name: string; line: string; status?: Status; version?: string; repo: string;
   site?: string; docs?: string; live?: string; liveLabel?: string; program?: string;
   role?: string; usedBy?: string[]; localAI?: string;
+  alsoIn?: string[]; // other program pages that list this item too
 }
 interface Data { programs: Program[]; products: Item[]; core: Item[]; workshop: Item[]; archive: Item[] }
 
@@ -31,7 +32,11 @@ const STATUS_LABEL: Record<Status, string> = {
   development: "In development", parked: "Parked", archived: "Archived", planned: "Planned",
 };
 const shipping = (s?: Status): boolean => s === "live" || s === "released" || s === "beta" || s === "preview";
-const byProgram = (id: string): Item[] => data.products.filter((p) => p.program === id);
+// A program lists its own products, then items from other programs or the core that also belong there.
+const byProgram = (id: string): Item[] => [
+  ...data.products.filter((p) => p.program === id),
+  ...[...data.products, ...data.core].filter((p) => p.program !== id && (p.alsoIn ?? []).includes(id)),
+];
 const program = (id: string): Program => data.programs.find((p) => p.id === id)!;
 const pageFor = (id: string): string => `${id}.html`;
 const tally = (items: Item[]) => ({ ship: items.filter((i) => shipping(i.status)).length, dev: items.filter((i) => i.status === "development").length });
@@ -124,36 +129,19 @@ function fiber(): string {
   return `<svg class="fiber" viewBox="0 0 520 400" aria-hidden="true" focusable="false">${lines.join("")}${homes.join("")}<circle cx="${hub.x}" cy="${hub.y}" r="14" fill="#e3ac2e"/><circle cx="${hub.x}" cy="${hub.y}" r="24" fill="none" stroke="#e3ac2e" stroke-width="2" opacity=".5"/></svg>`;
 }
 
-// The core as utilities under the street: programs above ground, shared lines below.
+// The core as a plain grid: one row per shared part, one column per program, a dot where a program uses it.
 function utilities(): string {
-  const W = 1240, streetY = 150, pad = 270, rowH = 64;
   const progs = data.programs;
-  const colW = (W - pad) / progs.length;
-  const px = (i: number) => pad + colW * i + colW / 2;
-  const core = data.core;
-  const pipeY = (j: number) => streetY + 64 + j * rowH;
-  const bld = progs.map((p, i) => {
-    const x = px(i), h = 54 + (i % 3) * 18;
-    return `<a href="${pageFor(p.id)}"><rect class="bldg" x="${x - 88}" y="${streetY - h}" width="176" height="${h}" rx="3"/><text class="blabel" x="${x}" y="${streetY - h + 26}" text-anchor="middle">${esc(p.name)}</text></a>`;
+  const head = `<tr><th scope="col" class="cm-part">Shared part</th>${progs.map((p) => `<th scope="col"><a href="${pageFor(p.id)}">${esc(p.name)}</a></th>`).join("")}</tr>`;
+  const rows = data.core.map((c) => {
+    const planned = c.status === "planned";
+    const cells = progs.map((p) => (c.usedBy ?? []).includes(p.id)
+      ? `<td><span class="cm-dot${planned ? " planned" : ""}" role="img" aria-label="${planned ? "Will use" : "Uses"}"></span></td>`
+      : `<td><span class="cm-none" role="img" aria-label="Does not use"></span></td>`).join("");
+    return `<tr><th scope="row" class="cm-part"><span class="cm-name">${esc(c.name)}${planned ? " <em>(planned)</em>" : ""}</span><span class="cm-role">${esc(c.line)}</span></th>${cells}</tr>`;
   }).join("");
-  const pipes = core.map((c, j) => `<path class="pipe p${j % 5}" d="M${pad - 20},${pipeY(j)} L${W - 16},${pipeY(j)}"${c.status === "planned" ? ' stroke-dasharray="14 10" opacity=".8"' : ""}/>`).join("");
-  const risers = progs.map((p, i) => {
-    const used = core.map((c, j) => ((c.usedBy ?? []).includes(p.id) ? j : -1)).filter((j) => j >= 0);
-    if (!used.length) return "";
-    const deepest = Math.max(...used);
-    const joints = used.map((j) => `<circle cx="${px(i)}" cy="${pipeY(j)}" r="7" fill="#fbfaf3" stroke="#22251f" stroke-width="2.5"/>`).join("");
-    return `<path class="drop" stroke="#22251f" d="M${px(i)},${streetY + 8} L${px(i)},${pipeY(deepest)}"/>${joints}`;
-  }).join("");
-  const labels = core.map((c, j) => `<text class="plabel" x="0" y="${pipeY(j) - 4}">${esc(c.name)}${c.status === "planned" ? " (planned)" : ""}</text><text class="prole" x="0" y="${pipeY(j) + 14}">${esc(c.role ?? "")}</text>`).join("");
-  const H = pipeY(core.length - 1) + 40;
-  const strata = [0, 1, 2, 3].map((k) => `<path class="strata" d="M${pad - 20},${streetY + 40 + k * 100} C${pad + 300},${streetY + 30 + k * 100} ${pad + 700},${streetY + 60 + k * 100} ${W},${streetY + 38 + k * 100}"/>`).join("");
-  return `<svg class="utilities" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="ut-t ut-d">
-<title id="ut-t">The shared core runs under every program</title>
-<desc id="ut-d">${esc(core.map((c) => `${c.name} serves ${(c.usedBy ?? []).map((u) => program(u).name).join(", ")}`).join(". "))}.</desc>
-<rect class="ground" x="${pad - 20}" y="${streetY}" width="${W - pad + 20}" height="${H - streetY}" rx="4"/>${strata}
-<rect class="street" x="${pad - 20}" y="${streetY - 2}" width="${W - pad + 20}" height="10"/>
-${bld}${pipes}${risers}${labels}
-</svg>`;
+  return `<div class="ledger-wrap"><table class="coremap"><caption>Which program uses which shared part</caption><thead>${head}</thead><tbody>${rows}</tbody></table></div>
+<p class="legend-note"><span class="cm-dot"></span> uses it today &nbsp; <span class="cm-dot planned"></span> will use it (planned) &nbsp; <span class="cm-none"></span> does not use it</p>`;
 }
 
 const chip = `<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="6" y="6" width="4" height="4" fill="currentColor"/><path d="M6 1v2.5M10 1v2.5M6 12.5V15M10 12.5V15M1 6h2.5M1 10h2.5M12.5 6H15M12.5 10H15" stroke="currentColor" stroke-width="1.4"/></svg>`;
@@ -456,7 +444,8 @@ ${opts.uses ? `<td><span class="uses">${(i.usedBy ?? []).map((u) => `<a href="${
 // ---------- shared sections ----------
 const picksFor = (id: string, n = 4): Item[] => {
   const order: Status[] = ["live", "released", "beta", "preview", "development"];
-  return [...byProgram(id)].filter((i) => i.status !== "parked").sort((a, b) => order.indexOf(a.status!) - order.indexOf(b.status!)).slice(0, n);
+  const borrowed = (i: Item) => (i.program === id ? 0 : 1); // a program's own products come first
+  return [...byProgram(id)].filter((i) => i.status !== "parked").sort((a, b) => borrowed(a) - borrowed(b) || order.indexOf(a.status!) - order.indexOf(b.status!)).slice(0, n);
 };
 const trails = data.programs.map((p) => {
   const items = byProgram(p.id);
@@ -548,7 +537,7 @@ const home = `<section class="hero">${topo()}<div class="wrap">
 <section class="section"><div class="wrap">
 <div class="head"><h2>The pipes under the street</h2><p>Transcription, records connectors and evidence search are built once and shared, like the water main under every house. A fix made for a town clerk reaches the newsroom and the station the same day.</p></div>
 ${utilities()}
-<p class="legend-note">Each line is a shared component. A drop shows which program draws on it. The dashed line is planned. <a href="core.html">See the core in detail</a></p>
+<p class="legend-note">Read across a row to see every program that shares that part. <a href="core.html">See the core in detail</a></p>
 </div></section>
 
 <section class="section localai"><div class="wrap">
