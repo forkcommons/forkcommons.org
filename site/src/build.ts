@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 type Status = "live" | "released" | "beta" | "preview" | "development" | "archived" | "planned";
 type Blaze = "circle" | "square" | "diamond" | "triangle" | "bar";
-interface Program { id: string; name: string; domain?: string; for: string; summary: string; org: string; site?: string; blaze: Blaze }
+interface Program { id: string; name: string; domain?: string; for: string; summary: string; org: string; site?: string; release?: { label: string; url: string; summary: string }; blaze: Blaze }
 interface Item {
   name: string; line: string; status?: Status; version?: string; repo: string;
   site?: string; docs?: string; live?: string; liveLabel?: string; program?: string;
@@ -598,7 +598,7 @@ ${blaze(p.blaze)}
 ${p.domain ? `<p class="muted"><strong>${esc(p.domain)}</strong></p>` : ""}
 <h1>${esc(p.name)}</h1>
 <p class="lede">${esc(p.summary)}</p>
-${p.release ? `<p class="legend-note"><strong>${esc(p.release.label)}:</strong> ${esc(p.release.summary)} <a href="${esc(p.release.url)}">Release notes and signed installer</a>.</p>` : ""}
+${p.release ? `<p class="legend-note"><strong>${esc(p.release.label)}:</strong> ${esc(p.release.summary)} <a href="${esc(p.release.url)}">${/candidate/i.test(p.release.label) ? "Candidate notes" : "Release notes and signed installer"}</a>.</p>` : ""}
 <div class="meta"><span>For <strong>${esc(p.for.toLowerCase())}</strong></span><span><strong>${esc(tallyText(items))}</strong></span>${p.site ? `<a href="${esc(p.site)}">${esc(p.name)} website</a>` : ""}<a href="${esc(p.org)}">Code on GitHub</a></div>
 </div>
 </div></section>

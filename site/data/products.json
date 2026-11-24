@@ -9,9 +9,9 @@
       "org": "https://github.com/townlight",
       "site": "https://townlight.github.io/",
       "release": {
-        "label": "Townlight Windows beta 1.9.3.1",
-        "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.1",
-        "summary": "Townlight for Windows 1.9.3.1 includes Data, Budget, and Grants, verified together by signed acceptance."
+        "label": "Townlight Windows beta 1.9.3.2",
+        "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2",
+        "summary": "Published 2026-11-24T05:50:39Z. Private Records attachment downloads with integrity checks and a Station renewal control fix. Signed MSI direct-upgrade and lifecycle checks passed; an initial fresh-maintenance fixture failed. After fixture-only correction with no MSI rebuild, exact-artifact run 45328280431 passed. Windows 1.9.3.1 remains preserved as the previous release."
       },
       "blaze": "circle"
     },
