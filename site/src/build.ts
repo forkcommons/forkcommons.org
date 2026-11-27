@@ -263,13 +263,13 @@ function flow(id: string, custom?: [string, string, string][], label?: string): 
 // Source: townlight/townlight README (Architecture, Connected workflows) and townlight.github.io/assets/*.svg
 function townHall(): string {
   const ws = ["Records", "Meetings", "Code", "Zoning", "Planning", "Permitting", "Inspections", "Notice",
-    "Access", "Boards", "Contracts", "Procurement", "Budget", "Grants", "Data", "Core"];
-  const L = 150, R = 770, perRow = 8, wsW = (R - L - 40) / perRow;
-  const windows = ws.map((n, i) => { const x = L + 20 + (i % perRow) * wsW, y = 152 + Math.floor(i / perRow) * 40; return `<g><rect x="${x + 6}" y="${y}" width="${wsW - 12}" height="18" rx="3" class="th-win"/><path d="M${x + 6} ${y + 6} H${x + wsW - 6}" class="th-awn"/><text x="${x + wsW / 2}" y="${y + 32}" text-anchor="middle" class="th-ws">${n}</text></g>`; }).join("");
+    "Access", "Boards", "Contracts", "Procurement", "Budget", "Grants", "Data", "311", "Comms", "Parks", "Core"];
+  const L = 150, R = 770, perRow = 7, wsW = (R - L - 40) / perRow;
+  const windows = ws.map((n, i) => { const x = L + 20 + (i % perRow) * wsW, y = 150 + Math.floor(i / perRow) * 26; return `<g><rect x="${x + 6}" y="${y}" width="${wsW - 12}" height="10" rx="3" class="th-win"/><path d="M${x + 6} ${y + 4} H${x + wsW - 6}" class="th-awn"/><text x="${x + wsW / 2}" y="${y + 22}" text-anchor="middle" class="th-ws">${n}</text></g>`; }).join("");
   const gears = [[392, 398, 24], [436, 420, 16], [358, 428, 14]].map(([x, y, r]) => `<g transform="translate(${x},${y})"><circle r="${r}" class="th-gear"/><circle r="${r * 0.4}" class="th-gearhole"/>${[0, 45, 90, 135].map((a) => `<rect x="${-r * 0.18}" y="${-r * 1.28}" width="${r * 0.36}" height="${r * 2.56}" rx="2" transform="rotate(${a})" class="th-gear"/>`).join("")}</g>`).join("");
   return `<svg class="hall" viewBox="0 0 1120 640" role="img" aria-labelledby="th-t th-d">
 <title id="th-t">How TownLight is built</title>
-<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each of the 15 desktop modules (Records, Meetings, Code, Zoning, Planning, Permitting, Inspections, Notice, Access, Boards and Commissions, Contracts, Procurement, Budget, Grants and Data) and Core. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
+<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each of the 18 desktop modules (Records, Meetings, Code, Zoning, Planning, Permitting, Inspections, Notice, Access, Boards and Commissions, Contracts, Procurement, Budget, Grants, Data, 311, Communications and Parks) and Core. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
 <path d="M0 470 H1120" class="th-ground"/>
 <rect x="0" y="470" width="1120" height="170" class="th-earth"/>
 <path d="M${L - 20} 120 L${(L + R) / 2} 40 L${R + 20} 120 Z" class="th-roof"/>
@@ -493,7 +493,7 @@ const home = `<section class="hero">${topo()}<div class="wrap">
 <section class="facts" aria-label="At a glance"><ul>
 <li><strong>${total}</strong>products across five programs</li>
 <li><strong>${totalShip}</strong>shipping today</li>
-<li><strong>17</strong>TownLight modules in the Windows beta (16 functional modules plus the Core platform service)</li>
+<li><strong>20</strong>TownLight modules in the Windows beta (19 functional modules plus the Core platform service)</li>
 <li><strong>${liveTowns}</strong>Colorado towns on CivicCast Brief</li>
 <li><strong>${localCount}</strong>products run on local AI</li>
 <li><strong>$0</strong>in license fees, ever</li>
