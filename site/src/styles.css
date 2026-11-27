@@ -477,6 +477,8 @@ p { margin: 0; max-width: 64ch; }
 .routes .rm-r3 { stroke: #3d6e8c; stroke-dasharray: 1 0; }
 .routes .rm-r3 { transform: translate(0, 10px); }
 .routes .rm-r4 { stroke: #8c4a3d; }
+.routes .rm-r5 { stroke: #6a5590; }
+.routes .rm-key { transform: none; }
 .routes .rm-st { fill: #fbfaf3; stroke: var(--ink); stroke-width: 4; }
 .routes .rm-n { font-family: var(--display); font-weight: 800; font-size: 19px; fill: var(--ink); paint-order: stroke; stroke: var(--paper); stroke-width: 6px; stroke-linejoin: round; }
 .routes .rm-core { fill: var(--wood); }
