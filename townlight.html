@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TownLight | Fork Commons</title>
-<meta name="description" content="A municipal operations suite of 16 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility and meeting recording. Installed on the town's own computer and run by its own staff.">
+<meta name="description" content="A municipal operations suite of 19 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility, meeting recording, 311 service requests, city communications and parks. Installed on the town's own computer and run by its own staff.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@600;700;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -27,9 +27,9 @@
 <div class="text">
 <p class="muted"><strong>townlight.org</strong></p>
 <h1>TownLight</h1>
-<p class="lede">A municipal operations suite of 16 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility and meeting recording. Installed on the town's own computer and run by its own staff.</p>
-<p class="legend-note"><strong>Townlight Windows beta 1.9.3.2:</strong> Published 2026-11-24T05:50:39Z. Private Records attachment downloads with integrity checks and a Station renewal control fix. Signed MSI direct-upgrade and lifecycle checks passed; an initial fresh-maintenance fixture failed. After fixture-only correction with no MSI rebuild, exact-artifact run 45328280431 passed. Windows 1.9.3.1 remains preserved as the previous release. <a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2">Release notes and signed installer</a>.</p>
-<div class="meta"><span>For <strong>town halls, clerks, planners and public media stations</strong></span><span><strong>16 shipping</strong></span><a href="https://townlight.github.io/">TownLight website</a><a href="https://github.com/townlight">Code on GitHub</a></div>
+<p class="lede">A municipal operations suite of 19 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility, meeting recording, 311 service requests, city communications and parks. Installed on the town's own computer and run by its own staff.</p>
+<p class="legend-note"><strong>Townlight Windows public beta 1.10.0.1:</strong> Published 2026-11-27T05:51:59Z. Adds three modules to the signed Windows installer: 311 service requests, Communications and Parks. Private Records staff attachment downloads check the expected file size and SHA-256 before saving. Station operator controls work through session renewal. <a href="https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.10.0.1">Release notes and signed installer</a>.</p>
+<div class="meta"><span>For <strong>town halls, clerks, planners and public media stations</strong></span><span><strong>19 shipping</strong></span><a href="https://townlight.github.io/">TownLight website</a><a href="https://github.com/townlight">Code on GitHub</a></div>
 </div>
 </div></section>
 <section class="section flow-sec"><div class="wrap"><div class="figwrap"><svg class="flow" viewBox="0 0 1100 210" role="img" aria-label="TownLight workflow: Capture, then Decide, then Codify, then Serve, then Release"><path d="M110 78 C220 116 220 116 330 78 C440 40 440 40 550 78 C660 116 660 116 770 78 C880 40 880 40 990 78" class="fl-trail"/><g transform="translate(110,78)"><circle r="52" class="fl-disc"/><circle r="52" class="fl-ring"/><g transform="translate(-24,-24)" class="fl-icon"><rect x="6" y="15" width="26" height="20" rx="3"/><path d="M32 21 L42 15 V35 L32 29 Z"/><circle cx="14" cy="11" r="4"/><circle cx="24" cy="11" r="4"/></g></g>
@@ -42,7 +42,7 @@
 <div class="head"><h2>How TownLight is built</h2><p>Every request carries the sign-in of the person who made it, the city's rules live in one place, and the original files never get overwritten. Station records meetings from its own annex.</p></div>
 <div class="figwrap"><svg class="hall" viewBox="0 0 1120 640" role="img" aria-labelledby="th-t th-d">
 <title id="th-t">How TownLight is built</title>
-<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each of the 15 desktop modules (Records, Meetings, Code, Zoning, Planning, Permitting, Inspections, Notice, Access, Boards and Commissions, Contracts, Procurement, Budget, Grants and Data) and Core. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
+<desc id="th-d">A cutaway of a town hall. Top floor: the staff desktop with a workspace for each of the 18 desktop modules (Records, Meetings, Code, Zoning, Planning, Permitting, Inspections, Notice, Access, Boards and Commissions, Contracts, Procurement, Budget, Grants, Data, 311, Communications and Parks) and Core. Second floor: the native Rust and Tauri app, which carries each person's sign-in with every request. First floor: the Python domain runtime, where the city's business rules live, with an optional local AI room. Vault: PostgreSQL and the original files. Records leave through a release window only after a decision and an approval. Station is a separate annex with its own database and media.</desc>
 <path d="M0 470 H1120" class="th-ground"/>
 <rect x="0" y="470" width="1120" height="170" class="th-earth"/>
 <path d="M130 120 L460 40 L790 120 Z" class="th-roof"/>
@@ -51,7 +51,7 @@
 <rect x="153" y="120" width="14" height="350" class="th-col"/><rect x="273" y="120" width="14" height="350" class="th-col"/><rect x="393" y="120" width="14" height="350" class="th-col"/><rect x="513" y="120" width="14" height="350" class="th-col"/><rect x="633" y="120" width="14" height="350" class="th-col"/><rect x="753" y="120" width="14" height="350" class="th-col"/>
 <rect x="158" y="128" width="604" height="104" rx="4" class="th-floor"/>
 <text x="174" y="144" class="th-fl">Staff desktop</text>
-<g><rect x="176" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M176 158 H236.5" class="th-awn"/><text x="206.25" y="184" text-anchor="middle" class="th-ws">Records</text></g><g><rect x="248.5" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M248.5 158 H309" class="th-awn"/><text x="278.75" y="184" text-anchor="middle" class="th-ws">Meetings</text></g><g><rect x="321" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M321 158 H381.5" class="th-awn"/><text x="351.25" y="184" text-anchor="middle" class="th-ws">Code</text></g><g><rect x="393.5" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M393.5 158 H454" class="th-awn"/><text x="423.75" y="184" text-anchor="middle" class="th-ws">Zoning</text></g><g><rect x="466" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M466 158 H526.5" class="th-awn"/><text x="496.25" y="184" text-anchor="middle" class="th-ws">Planning</text></g><g><rect x="538.5" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M538.5 158 H599" class="th-awn"/><text x="568.75" y="184" text-anchor="middle" class="th-ws">Permitting</text></g><g><rect x="611" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M611 158 H671.5" class="th-awn"/><text x="641.25" y="184" text-anchor="middle" class="th-ws">Inspections</text></g><g><rect x="683.5" y="152" width="60.5" height="18" rx="3" class="th-win"/><path d="M683.5 158 H744" class="th-awn"/><text x="713.75" y="184" text-anchor="middle" class="th-ws">Notice</text></g><g><rect x="176" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M176 198 H236.5" class="th-awn"/><text x="206.25" y="224" text-anchor="middle" class="th-ws">Access</text></g><g><rect x="248.5" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M248.5 198 H309" class="th-awn"/><text x="278.75" y="224" text-anchor="middle" class="th-ws">Boards</text></g><g><rect x="321" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M321 198 H381.5" class="th-awn"/><text x="351.25" y="224" text-anchor="middle" class="th-ws">Contracts</text></g><g><rect x="393.5" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M393.5 198 H454" class="th-awn"/><text x="423.75" y="224" text-anchor="middle" class="th-ws">Procurement</text></g><g><rect x="466" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M466 198 H526.5" class="th-awn"/><text x="496.25" y="224" text-anchor="middle" class="th-ws">Budget</text></g><g><rect x="538.5" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M538.5 198 H599" class="th-awn"/><text x="568.75" y="224" text-anchor="middle" class="th-ws">Grants</text></g><g><rect x="611" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M611 198 H671.5" class="th-awn"/><text x="641.25" y="224" text-anchor="middle" class="th-ws">Data</text></g><g><rect x="683.5" y="192" width="60.5" height="18" rx="3" class="th-win"/><path d="M683.5 198 H744" class="th-awn"/><text x="713.75" y="224" text-anchor="middle" class="th-ws">Core</text></g>
+<g><rect x="176" y="150" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M176 154 H246.85714285714286" class="th-awn"/><text x="211.42857142857144" y="172" text-anchor="middle" class="th-ws">Records</text></g><g><rect x="258.8571428571429" y="150" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M258.8571428571429 154 H329.7142857142857" class="th-awn"/><text x="294.2857142857143" y="172" text-anchor="middle" class="th-ws">Meetings</text></g><g><rect x="341.7142857142857" y="150" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M341.7142857142857 154 H412.57142857142856" class="th-awn"/><text x="377.14285714285717" y="172" text-anchor="middle" class="th-ws">Code</text></g><g><rect x="424.57142857142856" y="150" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M424.57142857142856 154 H495.42857142857144" class="th-awn"/><text x="460" y="172" text-anchor="middle" class="th-ws">Zoning</text></g><g><rect x="507.42857142857144" y="150" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M507.42857142857144 154 H578.2857142857143" class="th-awn"/><text x="542.8571428571429" y="172" text-anchor="middle" class="th-ws">Planning</text></g><g><rect x="590.2857142857143" y="150" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M590.2857142857143 154 H661.1428571428572" class="th-awn"/><text x="625.7142857142858" y="172" text-anchor="middle" class="th-ws">Permitting</text></g><g><rect x="673.1428571428571" y="150" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M673.1428571428571 154 H744" class="th-awn"/><text x="708.5714285714286" y="172" text-anchor="middle" class="th-ws">Inspections</text></g><g><rect x="176" y="176" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M176 180 H246.85714285714286" class="th-awn"/><text x="211.42857142857144" y="198" text-anchor="middle" class="th-ws">Notice</text></g><g><rect x="258.8571428571429" y="176" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M258.8571428571429 180 H329.7142857142857" class="th-awn"/><text x="294.2857142857143" y="198" text-anchor="middle" class="th-ws">Access</text></g><g><rect x="341.7142857142857" y="176" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M341.7142857142857 180 H412.57142857142856" class="th-awn"/><text x="377.14285714285717" y="198" text-anchor="middle" class="th-ws">Boards</text></g><g><rect x="424.57142857142856" y="176" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M424.57142857142856 180 H495.42857142857144" class="th-awn"/><text x="460" y="198" text-anchor="middle" class="th-ws">Contracts</text></g><g><rect x="507.42857142857144" y="176" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M507.42857142857144 180 H578.2857142857143" class="th-awn"/><text x="542.8571428571429" y="198" text-anchor="middle" class="th-ws">Procurement</text></g><g><rect x="590.2857142857143" y="176" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M590.2857142857143 180 H661.1428571428572" class="th-awn"/><text x="625.7142857142858" y="198" text-anchor="middle" class="th-ws">Budget</text></g><g><rect x="673.1428571428571" y="176" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M673.1428571428571 180 H744" class="th-awn"/><text x="708.5714285714286" y="198" text-anchor="middle" class="th-ws">Grants</text></g><g><rect x="176" y="202" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M176 206 H246.85714285714286" class="th-awn"/><text x="211.42857142857144" y="224" text-anchor="middle" class="th-ws">Data</text></g><g><rect x="258.8571428571429" y="202" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M258.8571428571429 206 H329.7142857142857" class="th-awn"/><text x="294.2857142857143" y="224" text-anchor="middle" class="th-ws">311</text></g><g><rect x="341.7142857142857" y="202" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M341.7142857142857 206 H412.57142857142856" class="th-awn"/><text x="377.14285714285717" y="224" text-anchor="middle" class="th-ws">Comms</text></g><g><rect x="424.57142857142856" y="202" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M424.57142857142856 206 H495.42857142857144" class="th-awn"/><text x="460" y="224" text-anchor="middle" class="th-ws">Parks</text></g><g><rect x="507.42857142857144" y="202" width="70.85714285714286" height="10" rx="3" class="th-win"/><path d="M507.42857142857144 206 H578.2857142857143" class="th-awn"/><text x="542.8571428571429" y="224" text-anchor="middle" class="th-ws">Core</text></g>
 <rect x="158" y="240" width="604" height="96" rx="4" class="th-floor"/>
 <text x="174" y="268" class="th-fl">Native app, built in Rust and Tauri</text>
 <text x="174" y="292" class="th-sub">Your sign-in travels with every request.</text>
@@ -197,12 +197,26 @@
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/procurement/">Website</a><a href="https://github.com/townlight/procure">Code</a></td>
 </tr><tr>
+<td class="name"><a class="pname" href="https://townlight.github.io/products/311/">311</a></td>
+
+<td class="what">Resident service requests with privacy-aware tracking, staff workflow, notifications and Open311-compatible exchange.</td>
+
+<td class="st"><span class="status status-beta">Beta</span></td>
+<td class="links"><a href="https://townlight.github.io/products/311/">Website</a><a href="https://townlight.github.io/manuals/311.html">Manual</a><a href="https://github.com/townlight/311">Code</a></td>
+</tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/budget/">Budget</a></td>
 
 <td class="what">Staff can review budgets, prepare a public hearing packet, record the adopted budget, and publish it through Data.</td>
 
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/budget/">Website</a><a href="https://github.com/townlight/budget/blob/main/USER-MANUAL.md">Manual</a><a href="https://github.com/townlight/budget">Code</a></td>
+</tr><tr>
+<td class="name"><a class="pname" href="https://townlight.github.io/products/comms/">Communications</a></td>
+
+<td class="what">Draft, review, approve, schedule, correct and archive city communications, with the source trail attached.</td>
+
+<td class="st"><span class="status status-beta">Beta</span></td>
+<td class="links"><a href="https://townlight.github.io/products/comms/">Website</a><a href="https://townlight.github.io/manuals/communications.html">Manual</a><a href="https://github.com/townlight/comms">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/data/">Data</a></td>
 
@@ -217,23 +231,16 @@
 
 <td class="st"><span class="status status-beta">Beta</span></td>
 <td class="links"><a href="https://townlight.github.io/products/grants/">Website</a><a href="https://github.com/townlight/grants/blob/main/USER-MANUAL.md">Manual</a><a href="https://github.com/townlight/grants">Code</a></td>
+</tr><tr>
+<td class="name"><a class="pname" href="https://townlight.github.io/products/parks/">Parks</a></td>
+
+<td class="what">Parks facilities, reservations, programs, enrollment and maintenance.</td>
+
+<td class="st"><span class="status status-beta">Beta</span></td>
+<td class="links"><a href="https://townlight.github.io/products/parks/">Website</a><a href="https://townlight.github.io/manuals/parks.html">Manual</a><a href="https://github.com/townlight/parks">Code</a></td>
 </tr></tbody></table></div>
 
 <div class="ledger-wrap"><table class="ledger"><caption>Parked prototypes, not in the Windows release</caption><thead><tr><th scope="col">Product</th><th scope="col">What it does</th><th scope="col">Status</th><th scope="col">Links</th></tr></thead><tbody><tr>
-<td class="name"><a class="pname" href="https://townlight.github.io/products/311/">311</a></td>
-
-<td class="what">Resident service requests, triage and routing, with Open311 export.</td>
-
-<td class="st"><span class="status status-parked">Parked</span></td>
-<td class="links"><a href="https://townlight.github.io/products/311/">Website</a><a href="https://github.com/townlight/311">Code</a></td>
-</tr><tr>
-<td class="name"><a class="pname" href="https://townlight.github.io/products/comms/">Communications</a></td>
-
-<td class="what">Source-backed explainers, meeting summaries and newsletters.</td>
-
-<td class="st"><span class="status status-parked">Parked</span></td>
-<td class="links"><a href="https://townlight.github.io/products/comms/">Website</a><a href="https://github.com/townlight/comms">Code</a></td>
-</tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/court/">Courts</a></td>
 
 <td class="what">Cited procedure answers and hearing prep for municipal court clerks.</td>
@@ -268,13 +275,6 @@
 
 <td class="st"><span class="status status-parked">Parked</span></td>
 <td class="links"><a href="https://townlight.github.io/products/library/">Website</a><a href="https://github.com/townlight/library">Code</a></td>
-</tr><tr>
-<td class="name"><a class="pname" href="https://townlight.github.io/products/parks/">Parks</a></td>
-
-<td class="what">Parks and recreation policy, programs and maintenance triage.</td>
-
-<td class="st"><span class="status status-parked">Parked</span></td>
-<td class="links"><a href="https://townlight.github.io/products/parks/">Website</a><a href="https://github.com/townlight/parks">Code</a></td>
 </tr><tr>
 <td class="name"><a class="pname" href="https://townlight.github.io/products/safety/">Safety</a></td>
 

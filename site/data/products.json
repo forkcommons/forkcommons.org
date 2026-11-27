@@ -5,13 +5,13 @@
       "name": "TownLight",
       "domain": "townlight.org",
       "for": "Town halls, clerks, planners and public media stations",
-      "summary": "A municipal operations suite of 16 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility and meeting recording. Installed on the town's own computer and run by its own staff.",
+      "summary": "A municipal operations suite of 19 modules on a shared Core: records, meetings, code, zoning, planning, permits, inspections, notices, boards, contracts, procurement, budgets, grants, open data, accessibility, meeting recording, 311 service requests, city communications and parks. Installed on the town's own computer and run by its own staff.",
       "org": "https://github.com/townlight",
       "site": "https://townlight.github.io/",
       "release": {
-        "label": "Townlight Windows beta 1.9.3.2",
-        "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.9.3.2",
-        "summary": "Published 2026-11-24T05:50:39Z. Private Records attachment downloads with integrity checks and a Station renewal control fix. Signed MSI direct-upgrade and lifecycle checks passed; an initial fresh-maintenance fixture failed. After fixture-only correction with no MSI rebuild, exact-artifact run 45328280431 passed. Windows 1.9.3.1 remains preserved as the previous release."
+        "label": "Townlight Windows public beta 1.10.0.1",
+        "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.10.0.1",
+        "summary": "Published 2026-11-27T05:51:59Z. Adds three modules to the signed Windows installer: 311 service requests, Communications and Parks. Private Records staff attachment downloads check the expected file size and SHA-256 before saving. Station operator controls work through session renewal."
       },
       "blaze": "circle"
     },
@@ -183,10 +183,11 @@
     {
       "name": "311",
       "program": "townlight",
-      "line": "Resident service requests, triage and routing, with Open311 export.",
-      "status": "parked",
+      "line": "Resident service requests with privacy-aware tracking, staff workflow, notifications and Open311-compatible exchange.",
+      "status": "beta",
       "repo": "https://github.com/townlight/311",
-      "site": "https://townlight.github.io/products/311/"
+      "site": "https://townlight.github.io/products/311/",
+      "docs": "https://townlight.github.io/manuals/311.html"
     },
     {
       "name": "Budget",
@@ -200,10 +201,11 @@
     {
       "name": "Communications",
       "program": "townlight",
-      "line": "Source-backed explainers, meeting summaries and newsletters.",
-      "status": "parked",
+      "line": "Draft, review, approve, schedule, correct and archive city communications, with the source trail attached.",
+      "status": "beta",
       "repo": "https://github.com/townlight/comms",
-      "site": "https://townlight.github.io/products/comms/"
+      "site": "https://townlight.github.io/products/comms/",
+      "docs": "https://townlight.github.io/manuals/communications.html"
     },
     {
       "name": "Courts",
@@ -266,10 +268,11 @@
     {
       "name": "Parks",
       "program": "townlight",
-      "line": "Parks and recreation policy, programs and maintenance triage.",
-      "status": "parked",
+      "line": "Parks facilities, reservations, programs, enrollment and maintenance.",
+      "status": "beta",
       "repo": "https://github.com/townlight/parks",
-      "site": "https://townlight.github.io/products/parks/"
+      "site": "https://townlight.github.io/products/parks/",
+      "docs": "https://townlight.github.io/manuals/parks.html"
     },
     {
       "name": "Safety",
@@ -292,7 +295,7 @@
       "program": "local-news",
       "line": "A civic newsroom you run yourself: a public paper in front, an editor desk behind it.",
       "status": "live",
-      "version": "0.7.0",
+      "version": "0.8.1",
       "repo": "https://github.com/scottconverse/TownReporter",
       "live": "https://townreporter.org",
       "liveLabel": "townreporter.org",
@@ -304,7 +307,7 @@
       "program": "local-news",
       "line": "Cited recaps, news stories and a podcast episode for every public meeting.",
       "status": "live",
-      "version": "0.4.0",
+      "version": "0.6.0",
       "repo": "https://github.com/scottconverse/civiccast-brief",
       "site": "https://scottconverse.github.io/civiccast-brief/",
       "live": "https://civiccastbrief.org",
@@ -379,7 +382,7 @@
       "program": "public-media",
       "line": "A smaller CivicCast for smaller stations: live meetings and recorded shows to cable, YouTube and your own viewer website.",
       "status": "preview",
-      "version": "0.1.0.13",
+      "version": "0.1.0.14",
       "repo": "https://github.com/scottconverse/civiccast-lite",
       "site": "https://scottconverse.github.io/civiccast-lite/",
       "docs": "https://github.com/scottconverse/civiccast-lite/blob/main/docs/USER-MANUAL.md"
@@ -643,7 +646,7 @@
       "name": "Rigwell",
       "line": "A local workbench for coding agents: workstreams, missions, review and pull requests.",
       "status": "beta",
-      "version": "0.4.6",
+      "version": "0.5.1",
       "repo": "https://github.com/scottconverse/rigwell",
       "site": "https://scottconverse.github.io/rigwell/"
     },
