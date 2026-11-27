@@ -11,7 +11,7 @@
       "release": {
         "label": "Townlight Windows public beta 1.10.0.1",
         "url": "https://github.com/townlight/townlight/releases/tag/townlight-windows-v1.10.0.1",
-        "summary": "Published 2026-11-27T05:51:59Z. Adds three modules to the signed Windows installer: 311 service requests, Communications and Parks. Private Records staff attachment downloads check the expected file size and SHA-256 before saving. Station operator controls work through session renewal."
+        "summary": "Published 2026-11-27T05:51:59Z. Adds 311 resident requests and tracking, Communications publishing and email, and Parks reservations and enrollment to the Townlight desktop and Records. The signed installer passed hosted Windows and two-PC acceptance."
       },
       "blaze": "circle"
     },

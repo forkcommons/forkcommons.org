@@ -243,7 +243,7 @@ const ICON: Record<string, string> = {
   lock: '<rect x="10" y="21" width="28" height="20" rx="3"/><path d="M16 21 V15 C16 6 32 6 32 15 V21"/><circle cx="24" cy="31" r="3"/>',
 };
 const FLOWS: Record<string, [string, string, string][]> = {
-  townlight: [["camera", "Capture", "Station records the meeting"], ["gavel", "Decide", "Agendas, motions and votes"], ["book", "Codify", "Every code section traced"], ["stamp", "Serve", "Permits, zoning, records"], ["door", "Release", "A deliberate public release"]],
+  townlight: [["camera", "Capture", "Station records the meeting"], ["gavel", "Decide", "Agendas, motions and votes"], ["book", "Codify", "Every code section traced"], ["stamp", "Serve", "Permits, requests, records"], ["door", "Release", "A deliberate public release"]],
   "local-news": [["video", "Watch", "Meeting video, packets, minutes"], ["lines", "Transcribe", "Local speech-to-text"], ["search", "Find", "Leads and cited facts"], ["pen", "Write", "Local AI drafts, a person edits"], ["paper", "Publish", "Paper, recap and podcast"]],
   "public-media": [["camera", "Shoot", "Meetings and shows"], ["cc", "Caption", "Live and backup captions"], ["clock", "Schedule", "Playout to the channel"], ["ear", "Describe", "Audio description"], ["tv", "Share", "Channel, portal and archive"]],
   makers: [["bubble", "Describe", "A part in plain English"], ["cube", "Model", "Editable CAD source"], ["check", "Check", "Can it actually print?"], ["layers", "Slice", "Ready for the printer"], ["printer", "Print", "On your own machine"]],
@@ -321,26 +321,29 @@ function routeMap(): string {
     Meetings: [150, 200], Station: [330, 90], Records: [590, 90], Release: [870, 90],
     Code: [370, 230], Zoning: [590, 230], Permitting: [790, 230], Inspections: [980, 230], Planning: [150, 360],
     Procurement: [150, 480], Contracts: [370, 480], Data: [790, 480], Grants: [150, 580], Budget: [590, 580],
+    Parks: [370, 690], "311": [590, 690], Communications: [790, 690],
   };
   const route = (names: string[]) => names.map((n, i) => `${i ? "L" : "M"}${S[n][0]} ${S[n][1]}`).join(" ");
-  // r4 has two branches that meet at Data.
+  // r4 and r5 have two branches each.
   const routes: [string, string, string[][]][] = [
     ["r1", "A meeting becomes a records response", [["Meetings", "Station", "Records", "Release"]]],
     ["r2", "A new law becomes cited staff guidance", [["Meetings", "Code", "Zoning", "Permitting", "Inspections"]]],
     ["r3", "Policy and land use reach the public record", [["Planning", "Zoning", "Permitting", "Records"]]],
     ["r4", "Contracts and budgets become reviewed open data", [["Procurement", "Contracts", "Data"], ["Grants", "Budget", "Data"]]],
+    ["r5", "A resident request becomes a fix and a public update", [["Parks", "311", "Communications"], ["311", "Data"]]],
   ];
-  const stations = Object.entries(S).map(([n, [x, y]]) => `<g><circle cx="${x}" cy="${y}" r="15" class="rm-st"/><text x="${x}" y="${y < 120 ? y - 26 : y + 44}" text-anchor="middle" class="rm-n">${n === "Release" ? "Public release" : n}</text></g>`).join("");
-  const legend = routes.map(([c, t], i) => `<g transform="translate(${30 + (i % 2) * 560},${790 + Math.floor(i / 2) * 36})"><path d="M0 0 H44" class="rm-${c}"/><text x="56" y="6" class="rm-lg">${t}</text></g>`).join("");
-  return `<svg class="routes" viewBox="0 0 1120 860" role="img" aria-labelledby="rm-t rm-d">
+  const stations = Object.entries(S).map(([n, [x, y]]) => `<g><circle cx="${x}" cy="${y}" r="15" class="rm-st"/><text x="${x}" y="${y < 120 || n === "Data" ? y - 26 : y + 44}" text-anchor="middle" class="rm-n">${n === "Release" ? "Public release" : n}</text></g>`).join("");
+  const legend = routes.map(([c, t], i) => `<g transform="translate(${30 + (i % 2) * 560},${910 + Math.floor(i / 2) * 36})"><path d="M0 0 H44" class="rm-${c} rm-key"/><text x="56" y="6" class="rm-lg">${t}</text></g>`).join("");
+  return `<svg class="routes" viewBox="0 0 1120 1000" role="img" aria-labelledby="rm-t rm-d">
 <title id="rm-t">How TownLight's products connect</title>
-<desc id="rm-d">${esc(routes.map(([, t, b]) => `${t}: ${b.map((n) => n.join(", then ")).join("; and ")}`).join(". "))}. Core sits under all of them, with Notice, Access and Boards and Commissions alongside.</desc>
+<desc id="rm-d">${esc(routes.map(([, t, b]) => `${t}: ${b.map((n) => n.join(", then ")).join("; and ")}`).join(". "))}. Core sits under all of them, with Notice, Access and Boards and Commissions alongside. 311, Parks and Communications each archive to Records.</desc>
 ${routes.map(([c, , b]) => b.map((n) => `<path d="${route(n)}" class="rm-${c}"/>`).join("")).join("")}
 ${stations}
-<rect x="30" y="660" width="1060" height="84" rx="8" class="rm-core"/>
-<text x="560" y="690" text-anchor="middle" class="rm-ct">Core, under every route</text>
-<text x="560" y="714" text-anchor="middle" class="rm-cs">Shared accounts and sign-in, task helpers, and coherent backup and recovery.</text>
-<text x="560" y="734" text-anchor="middle" class="rm-cs">Notice, Access and Boards &amp; Commissions work alongside any route.</text>
+<rect x="30" y="772" width="1060" height="108" rx="8" class="rm-core"/>
+<text x="560" y="802" text-anchor="middle" class="rm-ct">Core, under every route</text>
+<text x="560" y="826" text-anchor="middle" class="rm-cs">Shared accounts and sign-in, task helpers, and coherent backup and recovery.</text>
+<text x="560" y="846" text-anchor="middle" class="rm-cs">Notice, Access and Boards &amp; Commissions work alongside any route.</text>
+<text x="560" y="866" text-anchor="middle" class="rm-cs">311, Parks and Communications each keep their archive in Records.</text>
 ${legend}
 </svg>`;
 }
@@ -601,9 +604,9 @@ ${p.id === "townlight" ? `<section class="section"><div class="wrap">
 <div class="figwrap">${townHall()}</div>
 </div></section>
 <section class="section"><div class="wrap">
-<div class="head"><h2>How the work connects</h2><p>Four of the routes TownLight supports today. Each stop keeps its own decisions; a handoff never quietly transfers authority.</p></div>
+<div class="head"><h2>How the work connects</h2><p>Five of the routes TownLight supports today. Each stop keeps its own decisions; a handoff never quietly transfers authority.</p></div>
 <div class="figwrap">${routeMap()}</div>
-<p class="legend-note">Drawn from the TownLight suite manual's connected workflows and architecture. <a href="https://townlight.github.io/manuals/suite.html#connected-workflows">Read the manual</a></p>
+<p class="legend-note">Drawn from the TownLight suite manual's connected workflows and architecture, and from the <a href="https://townlight.github.io/manuals/311.html">311</a>, <a href="https://townlight.github.io/manuals/parks.html">Parks</a> and <a href="https://townlight.github.io/manuals/communications.html">Communications</a> manuals. <a href="https://townlight.github.io/manuals/suite.html#connected-workflows">Read the suite manual</a></p>
 </div></section>` : ""}
 ${p.id === "public-media" ? `<section class="section"><div class="wrap">
 <div class="head"><h2>How a meeting leaves the chamber</h2><p>TownLight Station captures the meeting and hands it to CivicCast for the channel. The private recording, the live feed and the online upload each travel on their own path.</p></div>
